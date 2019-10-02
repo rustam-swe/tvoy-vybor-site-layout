@@ -1,0 +1,21 @@
+// Мобильные телефоны
+
+// max-width: 480px
+// @include mediaXs {
+// }
+
+
+// max-width: 767px
+@include mediaSm {}
+
+// Планшеты
+// min-width: 768px
+@include mediaMd {}
+
+// Настольные
+// min-width: 992px
+@include mediaLg {}
+
+// Большие
+// min-width: 1200px
+@include mediaXl {}

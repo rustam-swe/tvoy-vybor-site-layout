@@ -1,0 +1,71 @@
+// Конфигурации
+
+// Переменные
+$primary-color: #633176;
+$secondary-color: #aaa;
+
+$shadow: 0px 0px 20px 0px rgb(206, 206, 206);
+
+$font-14: 0.875rem;
+$font-16: 1rem;
+$font-18: 1.125rem;
+$font-20: 1.25rem;
+$font-25: 1.562rem;
+$font-30: 1.875rem;
+
+$main-font: Montserrat;
+
+$round: 50px;
+
+%flexCenterXY {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+:root {
+  font-size: 16px;
+  font-family: $main-font;
+  line-height: 1.5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+// Медиа запросы
+
+@mixin mediaXs {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin mediaSm {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+
+@mixin mediaMd {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
