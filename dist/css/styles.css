@@ -1,4 +1,4 @@
-.icon__badge, .flex {
+.icon__badge, .flex, .recommended__tabs-item_active, .recommended__thumb, .recommended__discount-percentage, .recommended__btn-buy, .offer__countdown {
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -140,6 +140,26 @@ div[class$="column"] {
   list-style: none;
   padding-left: 0; }
 
+.btn {
+  color: #fff;
+  background-color: #633176;
+  border: transparent;
+  border-radius: 5px; }
+
+[class$="price_original"] {
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #676767;
+  font-size: 18px; }
+  [class$="price_original"]:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 70px;
+    border-top: 1px solid #676767; }
+
 .text-left {
   text-align: left !important; }
 
@@ -147,10 +167,13 @@ div[class$="column"] {
   padding-top: 15px;
   padding-bottom: 15px; }
   .section__title {
-    margin-top: 0;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
     text-align: center;
-    font-size: 1.125rem;
-    text-transform: uppercase; }
+    color: #333333; }
   .section__desc {
     text-align: center;
     font-size: 0.875rem; }
@@ -162,3 +185,203 @@ div[class$="column"] {
   width: 100%;
   height: 445px;
   background: url(../imgs/banner-1.jpg) no-repeat center; }
+
+.recommended__tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  margin-bottom: 50px; }
+  .recommended__tabs-item {
+    height: 41px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #633176;
+    border-radius: 5px; }
+    .recommended__tabs-item_active {
+      color: #fff;
+      background: #633176;
+      padding: 6px 10px; }
+
+.recommended__grid {
+  grid-gap: 25px;
+  grid-template-areas: "large large large horizontal" "large large large horizontal" "vertical vertical vertical vertical "; }
+  .recommended__grid-item {
+    position: relative;
+    display: flex;
+    border: 1px solid #B0B0B0;
+    border-radius: 10px; }
+    .recommended__grid-item_horizontal {
+      width: 367px;
+      height: 160px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      font-weight: bold;
+      font-size: 18px;
+      grid-area: "horizontal"; }
+      .recommended__grid-item_horizontal > section {
+        width: 50%; }
+    .recommended__grid-item_vertical {
+      width: 258px;
+      height: 318px;
+      flex-direction: column;
+      padding: 15px 25px;
+      grid-area: "vertical"; }
+    .recommended__grid-item_large {
+      width: 737px;
+      height: 345px;
+      padding: 0;
+      grid-area: "large"; }
+
+.recommended__info {
+  display: flex;
+  flex-direction: column; }
+
+.recommended__name {
+  font-size: 18px;
+  color: #676767;
+  font-weight: bold; }
+  .recommended__name_large {
+    margin-top: 35px;
+    margin-bottom: 6px;
+    font-size: 24px;
+    line-height: 29px; }
+
+.recommended__model {
+  font-size: 18px;
+  color: #633176; }
+  .recommended__model_large {
+    font-size: 36px;
+    line-height: 44px; }
+
+.recommended__price {
+  font-weight: bold;
+  font-size: 24px; }
+  .recommended__price_large {
+    margin-top: 65px;
+    font-size: 36px;
+    line-height: 44px; }
+  .recommended__price_modifier {
+    position: relative;
+    top: -8px;
+    font-size: 12px; }
+    .recommended__price_modifier-large {
+      top: -20px;
+      font-size: 18px;
+      line-height: 22px; }
+
+.recommended__discount-percentage {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  height: 35px;
+  padding: 5px;
+  color: #333;
+  font-size: 24px;
+  border-radius: 10px;
+  border: 1px solid #633176; }
+
+.recommended__btn-buy {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  padding: 6px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.recommended__sign {
+  display: flex;
+  align-items: center;
+  height: 25px;
+  padding-left: 33px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #676767;
+  background: url(../imgs/recommended.svg) no-repeat left center; }
+
+.offer {
+  width: 100%;
+  height: 380px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: url(../imgs/offer-bg.jpg) no-repeat; }
+  .offer__container {
+    display: flex; }
+  .offer__info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px; }
+  .offer__name {
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    color: #676767; }
+  .offer__model {
+    padding-right: 30%;
+    font-size: 48px;
+    line-height: 59px;
+    color: #633176; }
+  .offer__rating {
+    display: flex;
+    align-items: center; }
+  .offer__testimonials-count {
+    margin-left: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #676767; }
+  .offer__price {
+    margin-top: 40px;
+    font-size: 40px;
+    line-height: 49px;
+    color: #333; }
+    .offer__price_original {
+      position: relative;
+      top: -20px;
+      font-size: 24px;
+      line-height: 29px;
+      color: #676767; }
+  .offer__cta-column {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; }
+  .offer__cta-text {
+    width: 172px;
+    font-size: 16px;
+    line-height: 22px; }
+  .offer__cta-btn {
+    height: 35px;
+    margin-left: 28px;
+    padding: 6px 20px;
+    align-self: flex-start; }
+  .offer__countdown {
+    position: relative;
+    width: 225px;
+    height: 120px;
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 31px;
+    color: #fff;
+    background: url(../imgs/offer-countdown-bg.svg) no-repeat;
+    background-size: contain; }
+    .offer__countdown-title {
+      position: absolute;
+      top: 20px; }
+  .offer__countdown-title, .offer__cta-label {
+    font-size: 14px;
+    line-height: 19px; }
+  .offer__hourse, .offer__minutes, .offer__seconds {
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 31px; }
+  .offer__minutes {
+    position: relative;
+    margin-left: 15px;
+    margin-right: 15px; }
+    .offer__minutes:after, .offer__minutes:before {
+      content: ':';
+      position: absolute;
+      top: 0; }
+    .offer__minutes:before {
+      left: -15px; }
+    .offer__minutes:after {
+      right: -10px; }

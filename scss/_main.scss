@@ -21,6 +21,30 @@
   padding-left: 0;
 }
 
+.btn {
+  color: #fff;
+  background-color: $primary-color;
+  border: transparent;
+  border-radius: 5px;
+}
+
+// Цена без скидок (зачеркнутый)
+[class$="price_original"] {
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #676767;
+  font-size: 18px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 70px;
+    border-top: 1px solid #676767;
+  }
+}
 
 // Шрифты
 // .bold {
@@ -40,12 +64,14 @@
   padding-bottom: 15px;
 
   &__title {
-    margin-top: 0;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
     text-align: center;
-    font-size: $font-18;
-    // color: $accent-orange;
-    text-transform: uppercase;
-    // font-family: $opensans-bold;
+
+    color: #333333;
   }
 
   &__desc {
@@ -64,4 +90,317 @@
   width: 100%;
   height: 445px;
   background: url(../imgs/banner-1.jpg) no-repeat center;
+}
+
+// Лучшие прежложения
+
+.recommended {
+  &__tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    &-item {
+      height: 41px;
+      font-size: 24px;
+      font-weight: bold;
+      color: $primary-color;
+      border-radius: 5px;
+
+      &_active {
+        @extend %flexCenterXY;
+
+        color: #fff;
+        background: $primary-color;
+        padding: 6px 10px;
+      }
+    }
+  }
+
+  &__grid {
+    // display: grid;
+    grid-gap: 25px;
+    grid-template-areas:
+      "large large large horizontal"
+      "large large large horizontal"
+      "vertical vertical vertical vertical ";
+
+    &-item {
+      position: relative;
+      display: flex;
+      border: 1px solid #B0B0B0;
+      border-radius: 10px;
+
+      &_horizontal {
+        width: 367px;
+        height: 160px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-weight: bold;
+        font-size: 18px;
+        // line-height: 22px;
+        grid-area: "horizontal";
+
+        &>section {
+          width: 50%
+        }
+      }
+
+      &_vertical {
+        width: 258px;
+        height: 318px;
+        flex-direction: column;
+        padding: 15px 25px;
+        grid-area: "vertical";
+      }
+
+      &_large {
+        width: 737px;
+        height: 345px;
+        padding: 0;
+        grid-area: "large";
+      }
+
+    }
+  }
+
+  &__thumb {
+    @extend %flexCenterXY;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    // align-items: 
+  }
+
+  &__name {
+    font-size: 18px;
+    color: #676767;
+    font-weight: bold;
+    // margin-top: 10px;
+
+    &_large {
+      margin-top: 35px;
+      margin-bottom: 6px;
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  &__model {
+    font-size: 18px;
+    color: $primary-color;
+
+    &_large {
+      font-size: 36px;
+      line-height: 44px;
+    }
+  }
+
+  &__price {
+    font-weight: bold;
+    font-size: 24px;
+
+    &_large {
+      margin-top: 65px;
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    &_modifier {
+      position: relative;
+      top: -8px;
+      font-size: 12px;
+
+      &-large {
+        top: -20px;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+
+    // Цена без скидок вынесана в начало в целях DRY
+  }
+
+  &__discount-percentage {
+    @extend %flexCenterXY;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    height: 35px;
+    padding: 5px;
+    color: #333;
+    font-size: 24px;
+    border-radius: 10px;
+    border: 1px solid #633176;
+  }
+
+  &__btn-buy {
+    @extend %flexCenterXY;
+
+    margin-top: 15px;
+    margin-bottom: 25px;
+    padding: 6px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__sign {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    padding-left: 33px;
+    font-size: 11px;
+    line-height: 13px;
+    color: #676767;
+    background: url(../imgs/recommended.svg) no-repeat left center
+  }
+}
+
+// Товар дня
+
+.offer {
+  width: 100%;
+  height: 380px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: url(../imgs/offer-bg.jpg) no-repeat;
+
+  &__container {
+    display: flex;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+  }
+
+  &__name {
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    color: $secondary-color
+  }
+
+  &__model {
+    padding-right: 30%;
+    font-size: 48px;
+    line-height: 59px;
+    color: $primary-color;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+  }
+
+  &__testimonials-count {
+    margin-left: 20px;
+    font-size: 16px;
+    line-height: 20px;
+    color: $secondary-color;
+  }
+
+  &__price {
+    margin-top: 40px;
+    font-size: 40px;
+    line-height: 49px;
+    color: #333;
+
+    &_original {
+      position: relative;
+      top: -20px;
+      font-size: 24px;
+      line-height: 29px;
+      color: $secondary-color;
+    }
+  }
+
+  &__cta {
+    &-column {
+      // display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-text {
+      width: 172px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    &-btn {
+      height: 35px;
+      margin-left: 28px;
+      padding: 6px 20px;
+      align-self: flex-start;
+    }
+  }
+
+  &__countdown {
+    @extend %flexCenterXY;
+
+    position: relative;
+    width: 225px;
+    height: 120px;
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 31px;
+    color: #fff;
+
+    background: url(../imgs/offer-countdown-bg.svg) no-repeat;
+    background-size: contain;
+
+    &-title {
+      position: absolute;
+      top: 20px;
+    }
+  }
+
+  &__countdown-title,
+  &__cta-label {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  // &__cta-label {
+  //   position: absolute;
+  //   bottom: 0
+  // }
+
+  &__hourse,
+  &__minutes,
+  &__seconds {
+    // position: relative;
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 31px;
+  }
+
+  &__minutes {
+    position: relative;
+    margin-left: 15px;
+    margin-right: 15px;
+
+    &:after,
+    &:before {
+      content: ':';
+      position: absolute;
+      top: 0;
+    }
+
+    &:before {
+      left: -15px;
+    }
+
+    &:after {
+      right: -10px;
+    }
+  }
 }
