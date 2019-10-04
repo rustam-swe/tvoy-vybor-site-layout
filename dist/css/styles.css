@@ -22,15 +22,17 @@
 
 .header__top-bar {
   background: #F0F0F0; }
+  .header__top-bar-container {
+    height: 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
 
-.top-bar__container {
-  height: 34px;
+.header__info {
   display: flex;
-  justify-content: space-between;
-  align-items: center; }
-
-div[class$="column"] {
-  display: flex; }
+  padding-top: 15px;
+  align-items: center;
+  justify-content: space-between; }
 
 .top-nav__list {
   display: flex; }
@@ -43,21 +45,19 @@ div[class$="column"] {
   align-items: center;
   margin-left: 27px; }
 
-.main-bar__container {
-  display: flex;
-  align-items: center;
-  height: 98px; }
-
 .logo-section,
 .nav-section {
   display: flex;
   flex-direction: column; }
 
 .logo {
-  width: 298px; }
+  display: flex;
+  flex-direction: column; }
+  .logo__img {
+    width: 298px; }
 
 .slogan {
-  paddin-left: 7px;
+  padding-left: 7px;
   font-size: 15px; }
 
 .nav-section {
@@ -81,22 +81,24 @@ div[class$="column"] {
 .work-time {
   font-size: 12px; }
 
-.nav__menu {
-  display: flex; }
-
-.nav__item {
-  color: #333;
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: bold;
-  text-transform: uppercase; }
-
-.nav__item:not(:first-child) {
-  margin-left: 35px; }
-
-.nav__link {
-  font-size: 15px;
-  color: #333; }
+.nav {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  .nav__menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
+  .nav__item {
+    color: #333;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+    text-transform: uppercase; }
+  .nav__item:not(:first-child) {
+    margin-left: 35px; }
+  .nav__link {
+    font-size: 15px;
+    color: #333; }
 
 .icon {
   position: relative;
@@ -109,6 +111,7 @@ div[class$="column"] {
     background-image: url(../imgs/user.svg);
     margin-right: 7px; }
   .icon_tel {
+    margin-right: 10px;
     background-image: url(../imgs/tel.svg); }
   .icon_cart {
     background-image: url(../imgs/cart.svg); }
@@ -140,6 +143,9 @@ div[class$="column"] {
   text-decoration: none;
   cursor: pointer;
   color: #000; }
+
+div[class$="column"] {
+  display: flex; }
 
 .capital {
   text-transform: uppercase; }

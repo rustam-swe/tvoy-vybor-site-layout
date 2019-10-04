@@ -15,7 +15,7 @@
 <body>
   <header class="header">
     <div class="header__top-bar">
-      <div class="container top-bar__container">
+      <div class="container header__top-bar-container">
         <div class="shops-column">
           <select name="shops-list" id="" class="shops-list">
             <option value="noginsk">Ногинск</option>
@@ -47,45 +47,44 @@
         </div>
       </div>
     </div>
-    <div class="header__main-bar">
-      <div class="container main-bar__container">
-        <section class="logo-section">
-          <img src="./imgs/logo.svg" alt="ТВОЙ ВЫБОР" class="logo">
+    <div class="container header__container">
+      <section class="header__info">
+        <div class="logo">
+          <img src="./imgs/logo.png" alt="ТВОЙ ВЫБОР" class="logo__img">
           <span class="slogan">заботимся о лучших ценах</span>
-        </section>
-        <section class="nav-section">
-          <div class="secondary-menu-bar">
-            <div class="contacts">
-              <a href="tel:8800000000" class="tel">
-                <i class="icon icon_tel"></i>
-                8 800 000-00-00
-              </a>
-              <div class="work-time">Ежедневно с 19:00 до 21:00</div>
-            </div>
-            <div class="filters-bar">
-              <i class="icon icon_cart cart">
-                <span class="icon__badge icon__badge_cart">2</span>
-              </i>
-              <i class="icon icon_filter filter">
-                <span class="icon__badge icon__badge_filter">2</span>
-              </i>
-              <i class="icon icon_search"></i>
-            </div>
-          </div>
-          <nav class="nav flex">
-            <div class="container">
-              <ul class="nav__menu list">
-                <li class="nav__item"><a href="#" class="nav__link link bold">Матрасы</a></li>
-                <li class="nav__item"><a href="#" class="nav__link link bold">Спальня</a></li>
-                <li class="nav__item"><a href="#" class="nav__link link bold">Гостинная</a></li>
-                <li class="nav__item"><a href="#" class="nav__link link bold">Десткая</a></li>
-                <li class="nav__item"><a href="#" class="nav__link link bold">Товары для дома</a></li>
-                <li class="nav__item"><a href="#" class="nav__link link bold">Дисконт</a></li>
-              </ul>
-            </div>
-          </nav>
-        </section>
-      </div>
+        </div>
+
+        <div class="header__contacts">
+          <a href="tel:8800000000" class="tel">
+            <i class="icon icon_tel"></i>
+            8 800 000-00-00
+          </a>
+        </div>
+        <div class="work-time">Ежедневно с 19:00 до 21:00</div>
+        <div class="filters-bar">
+          <i class="icon icon_cart cart">
+            <span class="icon__badge icon__badge_cart">2</span>
+          </i>
+          <i class="icon icon_filter filter">
+            <span class="icon__badge icon__badge_filter">2</span>
+          </i>
+          <i class="icon icon_search"></i>
+        </div>
+      </section>
+
+      <!-- Основное меню -->
+      <nav class="nav flex">
+        <ul class="nav__menu list">
+          <li class="nav__item"><a href="#" class="nav__link link bold">Диваны</a></li>
+          <li class="nav__item"><a href="#" class="nav__link link bold">Гостинная</a></li>
+          <li class="nav__item"><a href="#" class="nav__link link bold">Десткая мебель</a></li>
+          <li class="nav__item"><a href="#" class="nav__link link bold">Спальни</a></li>
+          <li class="nav__item"><a href="#" class="nav__link link bold">Матрасы</a></li>
+          <li class="nav__item"><a href="#" class="nav__link link bold">Малые формы</a></li>
+          <li class="nav__item"><a href="#" class="nav__link link bold">Кухни</a></li>
+          <li class="nav__item"><a href="#" class="nav__link link bold">Дисконт</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
   <main class="main">

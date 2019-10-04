@@ -10,7 +10,9 @@
   cursor: pointer;
   color: #000;
 }
-
+div[class$="column"] {
+  display: flex;
+}
 
 .capital {
   text-transform: uppercase;
@@ -597,6 +599,6 @@ color: $dark-gray;
 
   &__article-header{
     display: flex;
-    
+
   }
 }
