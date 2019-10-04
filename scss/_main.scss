@@ -73,7 +73,7 @@
     line-height: 44px;
     text-align: center;
 
-    color: #333333;
+    color: $dark-gray;
   }
 
   &__desc {
@@ -233,7 +233,7 @@
     right: -1px;
     height: 35px;
     padding: 5px;
-    color: #333;
+    color: $dark-gray;
     font-size: 24px;
     border-radius: 10px;
     border: 1px solid #633176;
@@ -312,7 +312,7 @@
     margin-top: 40px;
     font-size: 40px;
     line-height: 49px;
-    color: #333;
+    color: $dark-gray;
 
     &_original {
       position: relative;
@@ -477,7 +477,7 @@
         content: '';
         position: absolute;
         height: 22px;
-        border-left: 1px solid #333;
+        border-left: 1px solid $dark-gray;
         left: 50%;
       }
 
@@ -496,7 +496,7 @@
       margin-left: 29px;
       font-size: 14px;
       line-height: 17px;
-      color: #333;
+      color: $dark-gray;
     }
   }
 }
@@ -582,5 +582,21 @@
   &__link {
     text-decoration: underline;
   }
+}
 
+// Отзывы о товарах
+
+.testimonials{
+
+  &__title{
+    font-weight: bold;
+font-size: 36px;
+line-height: 44px;
+color: $dark-gray;
+  }
+
+  &__article-header{
+    display: flex;
+    
+  }
 }

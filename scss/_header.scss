@@ -90,8 +90,16 @@ div[class$="column"] {
     display: flex;
   }
 
-  &__item:not(:last-child) {
-    margin-right: 55px
+  &__item {
+    color: $dark-gray;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__item:not(:first-child) {
+    margin-left: 35px
   }
 
   &__link {
@@ -122,7 +130,7 @@ div[class$="column"] {
   }
 
   &_filter {
-    background-image: url(../imgs/cart.svg);
+    background-image: url(../imgs/filter.svg);
     margin-left: 40px;
     margin-right: 40px;
   }
