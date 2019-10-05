@@ -10,6 +10,7 @@
   cursor: pointer;
   color: #000;
 }
+
 div[class$="column"] {
   display: flex;
 }
@@ -24,9 +25,13 @@ div[class$="column"] {
 }
 
 .btn {
+  @extend %flexCenterXY;
+
   height: 35px;
   padding: 6px 20px;
   color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
   background-color: $primary-color;
   border: transparent;
   border-radius: 5px;
@@ -93,7 +98,28 @@ div[class$="column"] {
 .banner {
   width: 100%;
   height: 445px;
-  background: url(../imgs/banner-1.jpg) no-repeat center;
+  border-radius: 15px;
+  box-shadow: $shadow;
+  background: url(../imgs/banner-bg.png) no-repeat center;
+
+  &__title {
+    color: $dark-gray;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+  }
+
+  &__text {
+    color: $dark-gray;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &__btn {
+    font-size: 24px;
+    line-height: 29px;
+    background-color: $accent-blue;
+  }
 }
 
 // Лучшие прежложения
@@ -248,8 +274,6 @@ div[class$="column"] {
     margin-bottom: 25px;
     padding: 6px 20px;
     font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
   }
 
   &__sign {
@@ -267,11 +291,30 @@ div[class$="column"] {
 // Товар дня
 
 .offer {
+  position: relative;
   width: 100%;
   height: 380px;
   padding-top: 40px;
   padding-bottom: 40px;
   background: url(../imgs/offer-bg.jpg) no-repeat;
+
+  &__header {
+    @extend %flexCenterXY;
+
+    position: absolute;
+    top: 0;
+    height: 63px;
+    padding: 15px;
+    background-color: $primary-color;
+    border-radius: 0 0 30px 30px;
+  }
+
+  &__title {
+    color: #fff;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 34px;
+  }
 
   &__container {
     display: flex;
@@ -292,7 +335,8 @@ div[class$="column"] {
   }
 
   &__model {
-    padding-right: 30%;
+    margin-bottom: 5px;
+    padding-right: 15%;
     font-size: 48px;
     line-height: 59px;
     color: $primary-color;
@@ -334,13 +378,14 @@ div[class$="column"] {
     }
 
     &-text {
+      position: relative;
+      top: -75px;
       width: 172px;
-      font-size: 16px;
+      font-size: 15px;
       line-height: 22px;
     }
 
     &-btn {
-      height: 35px;
       margin-left: 28px;
       padding: 6px 20px;
       align-self: flex-start;
@@ -351,8 +396,11 @@ div[class$="column"] {
     @extend %flexCenterXY;
 
     position: relative;
-    width: 225px;
+    top: -50px;
+    width: 210px;
     height: 120px;
+    padding-top: 15px;
+    font-family: $secondary-font;
     font-weight: bold;
     font-size: 23px;
     line-height: 31px;
@@ -371,6 +419,7 @@ div[class$="column"] {
   &__cta-label {
     font-size: 14px;
     line-height: 19px;
+    font-weight: normal
   }
 
   // &__cta-label {
@@ -411,7 +460,7 @@ div[class$="column"] {
 
 // Как заказать мебель
 
-.steps-to-buy {
+/*.steps-to-buy {
   padding-top: 35px;
   padding-bottom: 35px;
   background: #F9F9F9;
@@ -502,6 +551,70 @@ div[class$="column"] {
     }
   }
 }
+*/
+
+// Преимещества
+
+.features {
+  background: #F9F9F9;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &__block {
+    @extend %flexCenterXY;
+  }
+
+  &__item,
+  &__sub-item {
+    @extend %flexCenterXY;
+    flex-direction: column;
+    width: 190px;
+    height: 150px;
+    padding: 12px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  &__item {
+    &:first-child {
+      flex-grow: 1;
+      background-color: #A556C2;
+    }
+
+    &:nth-child(2) {
+      background: #984EB5;
+    }
+
+    &:nth-child(3) {
+      background: #87459F;
+    }
+
+    &:nth-child(4) {
+      background: #783D8E;
+    }
+
+    &:last-child {
+      flex-grow: 1;
+      background: #633176;
+    }
+  }
+
+  &__sub-item{
+    &_first{
+align-self: flex-end;
+    }
+    &_last{
+      align-self: flex-start;
+    }
+  }
+
+  &__img {
+    width: 60px;
+    height: 60px;
+  }
+}
 
 // Форма рассылки
 
@@ -555,7 +668,6 @@ div[class$="column"] {
 
   &__btn {
     height: 40px;
-    font-weight: 500;
     font-size: 24px;
     line-height: 29px;
   }
@@ -588,16 +700,16 @@ div[class$="column"] {
 
 // Отзывы о товарах
 
-.testimonials{
+.testimonials {
 
-  &__title{
+  &__title {
     font-weight: bold;
-font-size: 36px;
-line-height: 44px;
-color: $dark-gray;
+    font-size: 36px;
+    line-height: 44px;
+    color: $dark-gray;
   }
 
-  &__article-header{
+  &__article-header {
     display: flex;
 
   }

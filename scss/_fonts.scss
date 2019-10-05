@@ -15,3 +15,12 @@
     font-weight: normal;
     font-style: normal;
 }
+
+// Используется в таймере на главной странице
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url('../fonts/OpenSans-Regular.woff') format('woff'),
+        url('../fonts/OpenSans-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
