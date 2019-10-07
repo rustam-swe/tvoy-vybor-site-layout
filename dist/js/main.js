@@ -61,3 +61,13 @@ $(document).ready(function () {
     dots: false
   });
 });
+
+// Аккардеон в каталоге
+
+const filtersList = document.querySelector('.filters__list'); // Аккардеон
+
+filtersList.addEventListener('click', e => {
+  e.preventDefault();
+  e.target.children[0].classList.toggle('filters__caret_collapse'); // стрелка
+  e.target.nextElementSibling.classList.toggle('filters__details_opened'); // контент
+})

@@ -1,3 +1,46 @@
+// Хлебные крошки
+
+.breadcrumbs {
+  margin-top: 10px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    font-size: 14px;
+    line-height: 17px;
+
+    &:not(:first-child) {
+      padding-left: 15px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 6px;
+        width: 5px;
+        height: 5px;
+        border-right: 1px solid $secondary-color;
+        border-bottom: 1px solid $secondary-color;
+        transform: rotate(-45deg) translateY(-50%);
+      }
+    }
+
+    &:last-child {
+      color: #000;
+    }
+
+  }
+
+  &__link {
+    color: $secondary-color;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
 // Продукты
 
 .products {

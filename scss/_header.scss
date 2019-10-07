@@ -37,34 +37,61 @@
   &-column {
     width: 250px;
   }
+
+  &-list {
+    padding-left: 10px;
+  }
+
+  &-count {
+    color: $secondary-color
+  }
 }
 
 .select-wrapper {
   position: relative;
   margin-right: 15px;
 
-  &::before {
+  &::before,
+  &::after {
     content: '';
     position: absolute;
     top: 36%;
     right: -12px;
     width: 12px;
     height: 7px;
-    background: url(../imgs/caret--down-full.svg) no-repeat;
+    background-repeat: no-repeat;
   }
 
-  &_lang::before {
-    background: url(../imgs/caret--down.svg) no-repeat;
+  &_region {
+    // padding-left: 10px;
+
+    &::before {
+      width: 11px;
+      height: 11px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-image: url(../imgs/maps-and-flags.svg);
+    }
+
+    &::after {
+      background-image: url(../imgs/caret--down-full.svg);
+    }
+  }
+
+  &_lang::after {
+    background: url(../imgs/caret--down.svg);
   }
 }
 
 .select-tag {
-  padding-right: 12spx;
+  // padding-right: 12px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   border: transparent;
   background-color: transparent;
+  cursor: pointer
 }
 
 .cabinet {
@@ -91,6 +118,7 @@
 .slogan {
   padding-left: 7px;
   font-size: 15px;
+  color: $secondary-color
 }
 
 .nav-section {
