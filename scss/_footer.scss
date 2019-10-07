@@ -1,1 +1,96 @@
 // Футер
+.footer {
+  background-color: #F2F2F2;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+
+    &-section {
+      width: 250px
+    }
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    color: $dark-gray;
+    font-family: $secondary-font;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &-menu__link {
+    color: $dark-gray;
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  &__contacts {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  &__info-bar {
+    background-color: #fff;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+  }
+}
+
+.socials {
+  display: flex;
+
+  &__link {
+    @extend %flexCenterXY;
+
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+
+    &:not(:first-child) {
+      margin-left: 10px
+    }
+  }
+
+  &__vk {
+    background-image: url(../imgs/socials--vk.svg)
+  }
+
+  &__instagram {
+    background-image: url(../imgs/socials--instagram.svg)
+  }
+
+  &__whatsapp {
+    background-image: url(../imgs/socials--whatsapp.svg)
+  }
+}
+
+.contacts-text {
+  margin-bottom: 15px
+}
+
+.payments {
+  &__methods {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  &__img:not(:first-child) {
+    margin-left: 10px
+  }
+}
+
+.privacy-policy,
+.developer {
+  font-size: 14px;
+  line-height: 19px;
+  font-family: $secondary-font;
+}

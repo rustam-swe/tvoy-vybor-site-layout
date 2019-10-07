@@ -17,10 +17,12 @@
     <div class="header__top-bar">
       <div class="container header__top-bar-container">
         <div class="shops-column">
-          <select name="shops-list" id="" class="shops-list">
-            <option value="noginsk">Ногинск</option>
-            <option value="moscow">Москва</option>
-          </select>
+          <div class="select-wrapper">
+            <select name="shops-list" id="" class="shops-list select-tag">
+              <option value="noginsk">Ногинск</option>
+              <option value="moscow">Москва</option>
+            </select>
+          </div>
           <div class="shops-count">1 магазин</div>
         </div>
 
@@ -36,14 +38,16 @@
         </div>
 
         <div class="right-column">
-          <select name="lang" id="lang" class="lang">
-            <option value="ru">RU</option>
-            <option value="eng">ENG</option>
-          </select>
-          <div class="cabinet">
+          <div class="select-wrapper select-wrapper_lang">
+            <select name="lang" id="lang" class="lang select-tag">
+              <option value="ru">RU</option>
+              <option value="eng">ENG</option>
+            </select>
+          </div>
+          <a href="#" class="cabinet link">
             <i class="icon icon_user"></i>
             Личный кабинет
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -55,7 +59,7 @@
         </div>
 
         <div class="header__contacts">
-          <a href="tel:8800000000" class="tel">
+          <a href="tel:8800000000" class="tel header__tel link">
             <i class="icon icon_tel"></i>
             8 800 000-00-00
           </a>
@@ -91,7 +95,8 @@
 
     <!-- Баннер -->
     <section class="banner">
-      <ul class="banner__slider">
+      <!-- <div class="container"> -->
+      <ul class="banner__slider list">
         <li class="banner__slide">
           <div class="banner__thumb">
             <img src="./imgs/banner-img.png" alt="ДК Шик" class="banner__img">
@@ -101,16 +106,33 @@
             <header class="banner__header">
               <h1 class="banner__title">ДК Шик</h1>
             </header>
-            <div class="banner__text">Если товар набирается поэлементно, тогда добавьте в корзину все выбранные элементы
+            <div class="banner__text">Если товар набирается поэлементно, тогда добавьте в корзину все выбранные
+              элементы
+            </div>
+            <button class="banner__btn btn">Купить</button>
+          </article>
+        </li>
+        <li class="banner__slide">
+          <div class="banner__thumb">
+            <img src="./imgs/banner-img.png" alt="ДК Шик" class="banner__img">
+            <span class="banner__bg-decor"></span>
+          </div>
+          <article class="banner__info">
+            <header class="banner__header">
+              <h1 class="banner__title">ДК Шик</h1>
+            </header>
+            <div class="banner__text">Если товар набирается поэлементно, тогда добавьте в корзину все выбранные
+              элементы
             </div>
             <button class="banner__btn btn">Купить</button>
           </article>
         </li>
       </ul>
+      <!-- </div> -->
     </section>
 
     <!-- Лучшие прдедлжения -->
-    <section class="recomended section">
+    <section class="recommended section">
       <div class="container">
         <header class="section__header">
           <h1 class="section__title">Лучшие предложения</h1>
@@ -120,87 +142,102 @@
           <li id="kids" class="recommended__tabs-item">Детям</li>
           <li id="tempur" class="recommended__tabs-item">Tempur</li>
         </ul>
-        <div class="recommended__grid">
-          <article class="recommended__grid-item recommended__grid-item_horizontal recommended__grid-item_large">
-            <section class="recommended__thumb recommended__thumb_horizontal recommended__thumb_large">
+
+        <!-- Сетка с товарами -->
+        <div class="products__grid recommended__products">
+          <article class="products__product products__product_horizontal products__product_large">
+            <section class="products__thumb products__thumb_horizontal products__thumb_large">
               <img src="./imgs/divan--shik.png" alt="Диван ДК Шик" class="recomended__img recomended__img_large">
             </section>
-            <section class="recommended__info">
-              <h4 class="recommended__name recommended__name_large">Диван</h4>
-              <h3 class="recommended__model recommended__model_large">ДК Шик</h3>
-              <div class="recommended__price recommended__price_large">
-                <span class="recommended__price_modifier recommended__price_modifier-large">от</span>
+            <section class="products__info">
+              <h4 class="products__name products__name_large">Диван</h4>
+              <h3 class="products__model products__model_large">ДК Шик</h3>
+              <div class="products__price products__price_large">
+                <span class="products__price_modifier products__price_modifier-large">от</span>
                 59 990 &#8381;
               </div>
-              <button class="recommended__btn-buy btn">купить</button>
-              <div class="recommended__sign">Качественная поддержка позвоночника</div>
+              <button class="products__btn-buy btn">купить</button>
+              <div class="products__sign">Качественная поддержка позвоночника</div>
             </section>
           </article>
-          <article class="recommended__grid-item recommended__grid-item_horizontal">
-            <section class="recommended__thumb recommended__thumb_horizontal">
+          <article class="products__product products__product_horizontal">
+            <section class="products__thumb products__thumb_horizontal">
               <img src="./imgs/matras--optima-1.png" alt="Матрас Optima Classic EVS" class="recomended__img">
             </section>
-            <section class="recommended__info">
-              <h4 class="recommended__name">Матрас</h4>
-              <h3 class="recommended__model">Optima Classic EVS</h3>
-              <div class="recommended__price">
-                <span class="recommended__price_modifier">от</span>
+            <section class="products__info">
+              <h4 class="products__name">Матрас</h4>
+              <h3 class="products__model">Optima Classic EVS</h3>
+              <div class="products__price">
+                <span class="products__price_modifier">от</span>
                 8 730 &#8381;
               </div>
-              <div class="recommended__sign">Качественная поддержка позвоночника</div>
+              <div class="products__sign">Качественная поддержка позвоночника</div>
             </section>
           </article>
-          <article class="recommended__grid-item recommended__grid-item_horizontal">
-            <section class="recommended__thumb recommended__thumb_horizontal">
+          <article class="products__product products__product_horizontal">
+            <section class="products__thumb products__thumb_horizontal">
               <img src="./imgs/matras--optima-1.png" alt="Матрас Optima Classic EVS" class="recomended__img">
             </section>
-            <section class="recommended__info">
-              <h4 class="recommended__name">Матрас</h4>
-              <h3 class="recommended__model">Optima Classic EVS</h3>
-              <div class="recommended__price">
-                <span class="recommended__price_modifier">от</span>
+            <section class="products__info">
+              <h4 class="products__name">Матрас</h4>
+              <h3 class="products__model">Optima Classic EVS</h3>
+              <div class="products__price">
+                <span class="products__price_modifier">от</span>
                 8 730 &#8381;
               </div>
-              <div class="recommended__sign">Качественная поддержка позвоночника</div>
+              <div class="products__sign">Качественная поддержка позвоночника</div>
             </section>
           </article>
-          <article class="recommended__grid-item recommended__grid-item_vertical">
-            <div class="recommended__discount-percentage">-20%</div>
-            <section class="recommended__thumb recommended__thumb_vertical">
+          <article class="products__product products__product_vertical">
+            <div class="products__discount-percentage">-20%</div>
+            <section class="products__thumb products__thumb_vertical">
               <img src="./imgs/matras--optima-1.png" alt="Матрас 140x200 Optima Classic EVS" class="recomended__img">
             </section>
-            <section class="recommended__info">
-              <h4 class="recommended__name">Матрас 140x200</h4>
-              <h3 class="recommended__model">Optima Classic EVS</h3>
-              <div class="recommended__price">8 730 &#8381;</div>
-              <div class="recommended__price_original">8 730 &#8381;</div>
-              <div class="recommended__sign">Качественная поддержка позвоночника</div>
+            <section class="products__info">
+              <h4 class="products__name">Матрас 140x200</h4>
+              <h3 class="products__model">Optima Classic EVS</h3>
+              <div class="products__price">8 730 &#8381;</div>
+              <div class="products__price_original">8 730 &#8381;</div>
+              <div class="products__sign">Качественная поддержка позвоночника</div>
             </section>
           </article>
-          <article class="recommended__grid-item recommended__grid-item_vertical">
-            <div class="recommended__discount-percentage">-20%</div>
-            <section class="recommended__thumb recommended__thumb_vertical">
+          <article class="products__product products__product_vertical">
+            <div class="products__discount-percentage">-20%</div>
+            <section class="products__thumb products__thumb_vertical">
               <img src="./imgs/matras--optima-1.png" alt="Матрас 140x200 Optima Classic EVS" class="recomended__img">
             </section>
-            <section class="recommended__info">
-              <h4 class="recommended__name">Матрас 140x200</h4>
-              <h3 class="recommended__model">Optima Classic EVS</h3>
-              <div class="recommended__price">8 730 &#8381;</div>
-              <div class="recommended__price_original">8 730 &#8381;</div>
-              <div class="recommended__sign">Качественная поддержка позвоночника</div>
+            <section class="products__info">
+              <h4 class="products__name">Матрас 140x200</h4>
+              <h3 class="products__model">Optima Classic EVS</h3>
+              <div class="products__price">8 730 &#8381;</div>
+              <div class="products__price_original">8 730 &#8381;</div>
+              <div class="products__sign">Качественная поддержка позвоночника</div>
             </section>
           </article>
-          <article class="recommended__grid-item recommended__grid-item_vertical">
-            <div class="recommended__discount-percentage">-20%</div>
-            <section class="recommended__thumb recommended__thumb_vertical">
+          <article class="products__product products__product_vertical">
+            <div class="products__discount-percentage">-20%</div>
+            <section class="products__thumb products__thumb_vertical">
               <img src="./imgs/matras--optima-1.png" alt="Матрас 140x200 Optima Classic EVS" class="recomended__img">
             </section>
-            <section class="recommended__info">
-              <h4 class="recommended__name">Матрас 140x200</h4>
-              <h3 class="recommended__model">Optima Classic EVS</h3>
-              <div class="recommended__price">8 730 &#8381;</div>
-              <div class="recommended__price_original">8 730 &#8381;</div>
-              <div class="recommended__sign">Качественная поддержка позвоночника</div>
+            <section class="products__info">
+              <h4 class="products__name">Матрас 140x200</h4>
+              <h3 class="products__model">Optima Classic EVS</h3>
+              <div class="products__price">8 730 &#8381;</div>
+              <div class="products__price_original">8 730 &#8381;</div>
+              <div class="products__sign">Качественная поддержка позвоночника</div>
+            </section>
+          </article>
+          <article class="products__product products__product_vertical">
+            <div class="products__discount-percentage">-20%</div>
+            <section class="products__thumb products__thumb_vertical">
+              <img src="./imgs/matras--optima-1.png" alt="Матрас 140x200 Optima Classic EVS" class="recomended__img">
+            </section>
+            <section class="products__info">
+              <h4 class="products__name">Матрас 140x200</h4>
+              <h3 class="products__model">Optima Classic EVS</h3>
+              <div class="products__price">8 730 &#8381;</div>
+              <div class="products__price_original">8 730 &#8381;</div>
+              <div class="products__sign">Качественная поддержка позвоночника</div>
             </section>
           </article>
         </div>
@@ -329,9 +366,163 @@
       </div>
     </section>
 
-    <!-- Форма рассылки -->
-    <section class="subscription">
-      <div class="subscription__container container">
+    <!-- Хиты продаж -->
+    <section class="sales-hits">
+      <div class="container">
+        <header class="sales-hits__header">
+          <h1 class="sales-hits__title">Товар дня</h1>
+        </header>
+        <div class="products__grid">
+          <article class="products__product products__product_vertical">
+            <div class="products__discount-percentage">-20%</div>
+            <section class="products__thumb products__thumb_vertical">
+              <img src="./imgs/matras--optima-1.png" alt="Матрас 140x200 Optima Classic EVS" class="recomended__img">
+            </section>
+            <section class="products__info">
+              <h4 class="products__name">Матрас 140x200</h4>
+              <h3 class="products__model">Optima Classic EVS</h3>
+              <div class="products__price">8 730 &#8381;</div>
+              <div class="products__price_original">8 730 &#8381;</div>
+              <div class="products__sign">Качественная поддержка позвоночника</div>
+            </section>
+          </article>
+          <article class="products__product products__product_vertical">
+            <div class="products__discount-percentage">-20%</div>
+            <section class="products__thumb products__thumb_vertical">
+              <img src="./imgs/matras--optima-1.png" alt="Матрас 140x200 Optima Classic EVS" class="recomended__img">
+            </section>
+            <section class="products__info">
+              <h4 class="products__name">Матрас 140x200</h4>
+              <h3 class="products__model">Optima Classic EVS</h3>
+              <div class="products__price">8 730 &#8381;</div>
+              <div class="products__price_original">8 730 &#8381;</div>
+              <div class="products__sign">Качественная поддержка позвоночника</div>
+            </section>
+          </article>
+          <article class="products__product products__product_vertical">
+            <div class="products__discount-percentage">-20%</div>
+            <section class="products__thumb products__thumb_vertical">
+              <img src="./imgs/matras--optima-1.png" alt="Матрас 140x200 Optima Classic EVS" class="recomended__img">
+            </section>
+            <section class="products__info">
+              <h4 class="products__name">Матрас 140x200</h4>
+              <h3 class="products__model">Optima Classic EVS</h3>
+              <div class="products__price">8 730 &#8381;</div>
+              <div class="products__price_original">8 730 &#8381;</div>
+              <div class="products__sign">Качественная поддержка позвоночника</div>
+            </section>
+          </article>
+          <article class="products__product products__product_vertical">
+            <div class="products__discount-percentage">-20%</div>
+            <section class="products__thumb products__thumb_vertical">
+              <img src="./imgs/matras--optima-1.png" alt="Матрас 140x200 Optima Classic EVS" class="recomended__img">
+            </section>
+            <section class="products__info">
+              <h4 class="products__name">Матрас 140x200</h4>
+              <h3 class="products__model">Optima Classic EVS</h3>
+              <div class="products__price">8 730 &#8381;</div>
+              <div class="products__price_original">8 730 &#8381;</div>
+              <div class="products__sign">Качественная поддержка позвоночника</div>
+            </section>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Отзывы о товарах -->
+    <section class="testimonials">
+      <div class="container">
+        <header class="testimonials__header">
+          <h1 class="testimonials__title">Отзывы о товарах</h1>
+        </header>
+        <div class="testimonials__list">
+          <article class="testimonials__article">
+            <header class="testimonials__article-header">
+              <section class="testimonials__thumb">
+                <img src="./imgs/matras--optima-2.png" alt="" class="testimonials__img">
+              </section>
+              <section class="testimonials__header-info">
+                <div class="testimonials__rating">
+                  <img src="./imgs/rating-start.svg" alt="" class="testimonials__rating-starts">
+                </div>
+                <div class="testimonials__name">Матрас</div>
+                <div class="testimonials__model">Eco EVS 9-zone</div>
+                <div class="testimonials__price">от <b>11 210 &#8381;</b> </div>
+              </section>
+            </header>
+            <section class="testimonials__body">
+              <div class="testimonials__author">
+                <b>Иван,</b> 23 апреля 2019
+              </div>
+              <div class="testimonials__text">
+                Матрас идеальный!очень хорошо подходит людям с больной поясницей.После того как стала спать на матрасе
+                забыла о болях в спине.матрас мягкий, но ты не проваливаешься спину очень хорошо поддерживает.Я довольна
+                покупкой.
+              </div>
+            </section>
+          </article>
+          <article class="testimonials__article">
+            <header class="testimonials__article-header">
+              <section class="testimonials__thumb">
+                <img src="./imgs/matras--optima-2.png" alt="" class="testimonials__img">
+              </section>
+              <section class="testimonials__header-info">
+                <div class="testimonials__rating">
+                  <img src="./imgs/rating-start.svg" alt="" class="testimonials__rating-starts">
+                </div>
+                <div class="testimonials__name">Матрас</div>
+                <div class="testimonials__model">Eco EVS 9-zone</div>
+                <div class="testimonials__price">от <b>11 210 &#8381;</b> </div>
+              </section>
+            </header>
+            <section class="testimonials__body">
+              <div class="testimonials__author">
+                <b>Иван,</b> 23 апреля 2019
+              </div>
+              <div class="testimonials__text">
+                Матрас идеальный!очень хорошо подходит людям с больной поясницей.После того как стала спать на матрасе
+                забыла о болях в спине.матрас мягкий, но ты не проваливаешься спину очень хорошо поддерживает.Я довольна
+                покупкой.
+              </div>
+            </section>
+          </article>
+          <article class="testimonials__article">
+            <header class="testimonials__article-header">
+              <section class="testimonials__thumb">
+                <img src="./imgs/matras--optima-2.png" alt="" class="testimonials__img">
+              </section>
+              <section class="testimonials__header-info">
+                <div class="testimonials__rating">
+                  <img src="./imgs/rating-start.svg" alt="" class="testimonials__rating-starts">
+                </div>
+                <div class="testimonials__name">Матрас</div>
+                <div class="testimonials__model">Eco EVS 9-zone</div>
+                <div class="testimonials__price">от <b>11 210 &#8381;</b> </div>
+              </section>
+            </header>
+            <section class="testimonials__body">
+              <div class="testimonials__author">
+                <b>Иван,</b> 23 апреля 2019
+              </div>
+              <div class="testimonials__text">
+                Матрас идеальный!очень хорошо подходит людям с больной поясницей.После того как стала спать на матрасе
+                забыла о болях в спине.матрас мягкий, но ты не проваливаешься спину очень хорошо поддерживает.Я довольна
+                покупкой.
+              </div>
+            </section>
+          </article>
+
+
+        </div>
+        <button class="btn btn_show-more">Показать еще</button>
+      </div>
+    </section>
+
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <!-- Форма рассылки -->
+      <section class="subscription">
         <header class="subscription__header">
           <h1 class="subscription__title">Подпишитесь на рассылку</h1>
           <h4 class="subscription__subtitle">Узнавайте первыми о выгодных предложениях!</h4>
@@ -354,53 +545,129 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Отзывы о товарах -->
-    <section class="testimonials">
-      <div class="container">
-        <header class="testimonials__header">
-          <h1 class="testimonials__title">Отзывы о товарах</h1>
-        </header>
-        <div class="testimonials__list">
-          <article class="testimonials__item">
-            <header class="testimonials__articele-header">
-              <div class="testimonials__thumb">
-                <img src="./imgs/matras--optima-2.png" alt="" class="testimonials__">
-              </div>
-              <div class="testimonials__rating">
-                <img src="./imgs/rating-start.svg" alt="" class="testimonials__rating-starts">
-              </div>
-              <div class="testimonials__name">Матрас</div>
-              <div class="testimonials__model">Eco EVS 9-zone</div>
-              <div class="testimonials__price">от <b>11 210 &#8381;</b> </div>
-            </header>
-            <section class="testimonials__body">
-              <div class="testimonials__author">
-                <b>Иван,</b> 23 апреля 2019
-              </div>
-              <div class="testimonials__text">
-                Матрас идеальный!очень хорошо подходит людям с больной поясницей.После того как стала спать на матрасе
-                забыла о болях в спине.матрас мягкий, но ты не проваливаешься спину очень хорошо поддерживает.Я довольна
-                покупкой.
-              </div>
+      <nav class="footer__nav">
+        <section class="footer__nav-section">
+          <h3 class="footer__title">Товары</h3>
+          <ul class="products-menu footer-menu list">
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Каталог</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Матрасы</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Кровати</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Детям</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">В гостинную</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Подушки и текстиль</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Товары для дома</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="footer__nav-section">
+          <h3 class="footer__title">Покупателю</h3>
+          <ul class="customers-menu footer-menu list">
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Как заказать</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Отследить заказ</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Способы оплаты</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Регионы доставки</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Гарантия и возврат</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Энциклопедия сна</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Конфеденциальность</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="footer__nav-section">
+          <h3 class="footer__title">Твой выбор</h3>
+          <ul class="company-menu footer-menu list">
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">О компании</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Новости</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Партнёрам</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Награди и сертификаты</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Социальная ответственность</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Вакансии и карьера</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Оптовым покупателям</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="footer__nav-section">
+          <h3 class="footer__title">Контакты</h3>
+          <div class="socials">
+            <a href="#" class="socials__link socials__vk"></a>
+            <a href="#" class="socials__link socials__instagram"></a>
+            <a href="#" class="socials__link socials__whatsapp"></a>
+          </div>
+          <div class="footer__contacts">
+            <a href="tel:8 800 333-37-37" class="footer-menu__link link link_tel">8 800 333-37-37</a>
+            <div class="contacts-text">Принимаем ваши заказы Ежедневно с 9:00 до 21:00 Единая линия фабрики Орматек
+            </div>
+            <a href="mailto:info@ormatek.com" class="footer-menu__link link link_underlined">info@ormatek.com</a>
+          </div>
+          <div class="payments">
+            <h4 class="payments__title">Принимаем к оплате:</h4>
+            <section class="payments__methods">
+              <img src="./imgs/payments--mastercard.png" alt="Mastercard" class="payments__img">
+              <img src="./imgs/payments--maestro.png" alt="Maestro" class="payments__img">
+              <img src="./imgs/payments--mir.png" alt="Mir" class="payments__img">
+              <img src="./imgs/payments--visa.png" alt="Visa" class="payments__img">
             </section>
-          </article>
-        </div>
+          </div>
+        </section>
+
+      </nav>
+
+    </div>
+    <section class="footer__info-bar">
+      <div class="container footer__container">
+        <a href="#" class="privacy-policy link link_underlined">Политика конфеденциальности</a>
+        <a href="#" class="developer link link_underlined">Сайт разработан студией IS ART</a>
       </div>
     </section>
-
-  </main>
-  <footer class="footer">
-
   </footer>
 
 
-
-  <!-- <script src="./js/jquery-v3.4.1.min.js"></script>
+  <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
   <script src="./js/slick.min.js"></script>
-  <script src="./js/main.js"></script> -->
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

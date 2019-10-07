@@ -1,5 +1,7 @@
 .header {
   &__top-bar {
+    font-size: 12px;
+    line-height: 15px;
     background: #F0F0F0;
 
     &-container {
@@ -29,6 +31,40 @@
   }
 
   // end media
+}
+
+.shops {
+  &-column {
+    width: 250px;
+  }
+}
+
+.select-wrapper {
+  position: relative;
+  margin-right: 15px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 36%;
+    right: -12px;
+    width: 12px;
+    height: 7px;
+    background: url(../imgs/caret--down-full.svg) no-repeat;
+  }
+
+  &_lang::before {
+    background: url(../imgs/caret--down.svg) no-repeat;
+  }
+}
+
+.select-tag {
+  padding-right: 12spx;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: transparent;
+  background-color: transparent;
 }
 
 .cabinet {
@@ -73,14 +109,17 @@
   align-items: center;
 }
 
-.tel {
+.header__tel {
   margin-right: 12px;
-  font-size: $font-18;
+  font-size: 24px;
+  line-height: 29px;
   color: #333;
 }
 
 .work-time {
-  font-size: 12px;
+  color: $secondary-color;
+  font-size: 14px;
+  line-height: 17px;
 }
 
 .nav {
@@ -109,6 +148,14 @@
     font-size: 15px;
     color: #333
   }
+}
+
+.right-column {
+  align-items: center
+}
+
+.lang {
+  font-weight: bold;
 }
 
 .icon {
