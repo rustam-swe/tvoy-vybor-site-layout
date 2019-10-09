@@ -32,6 +32,10 @@ div[class$="column"] {
 .list {
   list-style: none;
   padding-left: 0;
+
+  &_ordered {
+    list-style: inside decimal;
+  }
 }
 
 .btn {

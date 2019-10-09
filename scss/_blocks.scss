@@ -41,6 +41,31 @@
   }
 }
 
+// Блок с загаловком 
+.title-bar {
+  height: 140px;
+  background: url(../imgs/banner-bg.png) no-repeat center top;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-top: 35px;
+    color: $dark-gray;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    text-transform: uppercase;
+
+    &_centered {
+      text-align: center;
+    }
+  }
+}
+
+
 // Продукты
 
 .products {
