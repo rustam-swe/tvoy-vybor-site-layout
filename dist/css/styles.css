@@ -1145,6 +1145,13 @@ div[class$="column"] {
     justify-content: space-between;
     align-items: center;
     height: 50px; }
+  .footer__payments-methods {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px; }
+  .footer__payments-img:not(:first-child) {
+    margin-left: 10px; }
 
 .socials {
   display: flex; }
@@ -1163,14 +1170,6 @@ div[class$="column"] {
 
 .contacts-text {
   margin-bottom: 15px; }
-
-.payments__methods {
-  display: flex;
-  align-items: center;
-  margin-top: 15px; }
-
-.payments__img:not(:first-child) {
-  margin-left: 10px; }
 
 .privacy-policy,
 .developer {
