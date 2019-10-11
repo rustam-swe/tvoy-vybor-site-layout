@@ -54,13 +54,30 @@ headerMenu.addEventListener("click", (e) => {
   })
 })
 */
-// Слайдер на главной
 
 $(document).ready(function () {
+  // Слайдер на главной
   $('.banner__slider').slick({
     dots: false
   });
+
+  // Слайдер в карточке товара
+  $('.pcard__slider-main').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.pcard__slider-nav'
+  });
+  $('.pcard__slider-nav').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    asNavFor: '.pcard__slider-main',
+    dots: false,
+    focusOnSelect: true
+  });
 });
+
 
 // Аккардеон в каталоге
 

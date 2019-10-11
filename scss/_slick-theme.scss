@@ -103,7 +103,7 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-prev {
-    left: 30px;
+    left: 80px; // -25px; // 30px;
     background: url(../imgs/arrow--left.svg) no-repeat center 7px;
 
     &:before {
@@ -114,7 +114,7 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-next {
-    right: -25px;
+    right: 80px; // -25px;
     background: url(../imgs/arrow--right.svg) no-repeat center 7px;
 
     &:before {
