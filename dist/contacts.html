@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Твой выбор</title>
+  <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="./css/normalize.css">
+
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__top-bar">
+      <div class="container header__top-bar-container">
+        <div class="shops-column">
+          <div class="select-wrapper select-wrapper_region">
+            <select name="shops-list" class="shops-list select-tag">
+              <option value="noginsk">Ногинск</option>
+              <option value="moscow">Москва</option>
+            </select>
+          </div>
+          <div class="shops-count">1 магазин</div>
+        </div>
+
+        <div class="nav-column">
+          <nav class="top-nav">
+            <ul class="top-nav__list list">
+              <li class="top-nav__item"><a href="#" class="link">Доставка и оплата</a></li>
+              <li class="top-nav__item"><a href="#" class="link">О компании</a></li>
+              <li class="top-nav__item"><a href="#" class="link">Партнёрам</a></li>
+              <li class="top-nav__item"><a href="#" class="link">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="right-column">
+          <div class="select-wrapper select-wrapper_lang">
+            <select name="lang" id="lang" class="lang select-tag">
+              <option value="ru">RU</option>
+              <option value="eng">ENG</option>
+            </select>
+          </div>
+          <a href="#" class="cabinet link">
+            <i class="icon icon_user"></i>
+            Личный кабинет
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container header__container">
+      <section class="header__info">
+        <div class="logo">
+          <img src="./imgs/logo.png" alt="ТВОЙ ВЫБОР" class="logo__img">
+          <span class="slogan">заботимся о лучших ценах</span>
+        </div>
+
+        <div class="header__contacts">
+          <a href="tel:8800000000" class="tel header__tel link">
+            <i class="icon icon_tel"></i>
+            8 800 000-00-00
+          </a>
+        </div>
+        <div class="work-time">Ежедневно с 19:00 до 21:00</div>
+        <div class="filters-bar">
+          <i class="icon icon_cart cart">
+            <span class="icon__badge icon__badge_cart">2</span>
+          </i>
+          <i class="icon icon_filter filter">
+            <span class="icon__badge icon__badge_filter">2</span>
+          </i>
+          <i class="icon icon_search"></i>
+        </div>
+      </section>
+
+      <!-- Основное меню -->
+      <nav class="nav flex">
+        <ul class="nav__menu list">
+          <li class="nav__item"><a href="#" class="nav__link link bold">Диваны</a></li>
+          <li class="nav__item"><a href="#" class="nav__link link bold">Гостинная</a></li>
+          <li class="nav__item"><a href="#" class="nav__link link bold">Десткая мебель</a></li>
+          <li class="nav__item"><a href="#" class="nav__link link bold">Спальни</a></li>
+          <li class="nav__item"><a href="#" class="nav__link link bold">Матрасы</a></li>
+          <li class="nav__item"><a href="#" class="nav__link link bold">Малые формы</a></li>
+          <li class="nav__item"><a href="#" class="nav__link link bold">Кухни</a></li>
+          <li class="nav__item"><a href="#" class="nav__link link bold">Дисконт</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main">
+    <header class="content-header">
+      <div class="container">
+        <!-- Хлебные крошки -->
+        <section class="breadcrumbs">
+          <ul class="list breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link link">Интернет-магазин мебели</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link link">Каталог</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link link">Диваны</a>
+            </li>
+            <li class="breadcrumbs__item breadcrumbs__item_current">Прямые диваны</li>
+          </ul>
+        </section>
+
+        <!-- Загаловок страницы -->
+        <h1 class="page-title section-title">Контакты</h1>
+      </div>
+    </header>
+
+
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <!-- Форма рассылки -->
+      <section class="subscription">
+        <header class="subscription__header">
+          <h1 class="subscription__title">Подпишитесь на рассылку</h1>
+          <h4 class="subscription__subtitle">Узнавайте первыми о выгодных предложениях!</h4>
+        </header>
+        <div class="subscription__form-column">
+          <form action="" class="subscription__form">
+            <input type="text" class="subscription__input" placeholder="Введите email" required>
+            <button class="subscription__btn btn">Подписаться</button>
+          </form>
+          <div class="subscription__privacy-policy">
+            <div class="subscription__checkbox">
+              <input id="privacy-policy" type="checkbox">
+              <label class="subscription__label" for="privacy-policy">Я согласен с <a href="#"
+                  class="subscription__link link">политикой
+                  конфеденциальности</a></label>
+            </div>
+            <div class="subscription__checkbox">
+              <input id="subscribe-agree" type="checkbox">
+              <label class="subscription__label" for="privacy-policy">Я хочу получать рассылки от Твой выбор</label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="footer__nav">
+        <section class="footer__nav-section">
+          <h3 class="footer__title">Товары</h3>
+          <ul class="products-menu footer-menu list">
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Каталог</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Матрасы</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Кровати</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Детям</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">В гостинную</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Подушки и текстиль</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Товары для дома</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="footer__nav-section">
+          <h3 class="footer__title">Покупателю</h3>
+          <ul class="customers-menu footer-menu list">
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Как заказать</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Отследить заказ</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Способы оплаты</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Регионы доставки</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Гарантия и возврат</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Энциклопедия сна</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Конфеденциальность</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="footer__nav-section">
+          <h3 class="footer__title">Твой выбор</h3>
+          <ul class="company-menu footer-menu list">
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">О компании</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Новости</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Партнёрам</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Награди и сертификаты</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Социальная ответственность</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Вакансии и карьера</a>
+            </li>
+            <li class="footer-menu__item">
+              <a href="#" class="footer-menu__link link">Оптовым покупателям</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="footer__nav-section">
+          <h3 class="footer__title">Контакты</h3>
+          <div class="socials">
+            <a href="#" class="socials__link socials__vk"></a>
+            <a href="#" class="socials__link socials__instagram"></a>
+            <a href="#" class="socials__link socials__whatsapp"></a>
+          </div>
+          <div class="footer__contacts">
+            <a href="tel:8 800 333-37-37" class="footer-menu__link link link_tel">8 800 333-37-37</a>
+            <div class="contacts-text">Принимаем ваши заказы Ежедневно с 9:00 до 21:00 Единая линия фабрики Орматек
+            </div>
+            <a href="mailto:info@ormatek.com" class="footer-menu__link link link_underlined">info@ormatek.com</a>
+          </div>
+          <div class="footer__payments">
+            <h4 class="footer__payments-title">Принимаем к оплате:</h4>
+            <section class="footer__payments-methods">
+              <img src="./imgs/payments--mastercard.png" alt="Mastercard" class="footer__payments-img">
+              <img src="./imgs/payments--maestro.png" alt="Maestro" class="footer__payments-img">
+              <img src="./imgs/payments--mir.png" alt="Mir" class="footer__payments-img">
+              <img src="./imgs/payments--visa.png" alt="Visa" class="footer__payments-img">
+            </section>
+          </div>
+        </section>
+
+      </nav>
+
+    </div>
+    <section class="footer__info-bar">
+      <div class="container footer__container">
+        <a href="#" class="privacy-policy link link_underlined">Политика конфеденциальности</a>
+        <a href="#" class="developer link link_underlined">Сайт разработан студией IS ART</a>
+      </div>
+    </section>
+  </footer>
+
+  <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
