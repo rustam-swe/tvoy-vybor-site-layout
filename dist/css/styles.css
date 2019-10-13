@@ -451,9 +451,6 @@ div[class$="column"] {
     width: 70px;
     border-top: 1px solid #676767; }
 
-.text-left {
-  text-align: left !important; }
-
 .section {
   padding-top: 15px;
   padding-bottom: 15px; }
@@ -511,6 +508,9 @@ div[class$="column"] {
     text-transform: uppercase; }
     .title-bar__title_centered {
       text-align: center; }
+
+.main {
+  background: url(../imgs/main--bg.png); }
 
 .products__grid {
   display: grid;
@@ -1382,6 +1382,36 @@ div[class$="column"] {
 
 .tab__container {
   margin-top: 30px; }
+
+.about {
+  height: 540px;
+  background: url(../imgs/about--bg-1.jpg); }
+  .about__header {
+    padding-top: 1px; }
+  .about__title, .about__paragraph, .about__li {
+    color: #fff; }
+  .about__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    text-transform: uppercase; }
+  .about__paragraph {
+    margin-bottom: 15px;
+    line-height: 18px; }
+    .about__paragraph_uppercase {
+      text-transform: uppercase;
+      font-weight: bold; }
+  .about__list {
+    list-style-position: inside; }
+  .about__li {
+    margin-top: 20px; }
+
+.featured-block {
+  height: 680px;
+  margin-top: 100px;
+  background: url(../imgs/about--bg-2.jpg); }
+  .featured-block__container {
+    padding-left: 50px; }
 
 .footer {
   background-color: #F2F2F2; }

@@ -81,11 +81,6 @@ div[class$="column"] {
   }
 }
 
-
-.text-left {
-  text-align: left !important;
-}
-
 .section {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -97,7 +92,6 @@ div[class$="column"] {
     font-size: 36px;
     line-height: 44px;
     text-align: center;
-
     color: $dark-gray;
   }
 
@@ -175,6 +169,9 @@ div[class$="column"] {
   }
 }
 
+.main {
+  background: url(../imgs/main--bg.png)
+}
 
 // Продукты
 
