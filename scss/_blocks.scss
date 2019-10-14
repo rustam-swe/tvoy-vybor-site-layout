@@ -54,12 +54,19 @@ div[class$="column"] {
     font-size: 24px;
     line-height: 29px;
     text-transform: initial;
-    border: 1px solid #633176;
+    border: 1px solid $primary-color;
     background-color: transparent;
   }
 
   &_show-more {
     margin: 75px auto 0;
+  }
+
+  &_txt-only{
+    padding: 0;
+    color: $primary-color;
+    border: transparent;
+    background: transparent;
   }
 }
 
