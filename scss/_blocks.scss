@@ -62,13 +62,78 @@ div[class$="column"] {
     margin: 75px auto 0;
   }
 
-  &_txt-only{
+  &_txt-only {
     padding: 0;
     color: $primary-color;
     border: transparent;
     background: transparent;
   }
 }
+
+.icon {
+  position: relative;
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &_user {
+    background-image: url(../imgs/user.svg);
+    margin-right: 7px
+  }
+
+  &_tel {
+    margin-right: 10px;
+    background-image: url(../imgs/tel.svg);
+  }
+
+  &_cart {
+    background-image: url(../imgs/cart.svg);
+  }
+
+  &_filter {
+    background-image: url(../imgs/filter.svg);
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  &_search {
+    background-image: url(../imgs/search.svg);
+  }
+
+  &__badge {
+    @extend %flexCenterXY;
+
+    position: absolute;
+    width: 16px;
+    height: 9px;
+    font-size: 8px;
+    color: #fff;
+    font-style: normal;
+    background-color: $primary-color;
+    border-radius: 5px;
+
+    &_cart {
+      top: 5px;
+      right: -16px;
+    }
+
+    &_filter {
+      // top: 0;
+      right: -16px;
+    }
+  }
+
+  &_wallet {
+    background-image: url(../imgs/payments--wallet.svg);
+  }
+
+  &_card {
+    background-image: url(../imgs/payments--card.svg);
+  }
+}
+
 
 // Цена без скидок (зачеркнутый)
 [class$="price_original"] {
@@ -489,6 +554,96 @@ div[class$="column"] {
       padding-top: 7px;
       padding-bottom: 7px
     }
+  }
+
+}
+
+// Форма заявки + доставки
+.contact-form {
+  width: 370px;
+  flex-shrink: 0;
+  display: grid;
+  grid-gap: 20px 10px;
+  grid-template-areas:
+    "name tel"
+    "text text"
+    "checkbox checkbox"
+    "btn btn"
+    "disclaimer disclaimer";
+
+  &_column {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+
+    & input {
+      width: 100%
+    }
+  }
+
+  &>*:not(.btn) {
+    font-family: $secondary-font;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  & input,
+  &__text {
+    padding: 6px 10px;
+    background: #F5F5F5;
+    border: 0.5px solid #606060;
+
+    &::placeholder,
+    &:-ms-input-placeholder,
+    &::-ms-input-placeholder {
+      color: #CBCBCB;
+    }
+  }
+
+  &__label {
+    font-weight: bold
+  }
+
+  &__name,
+  &__tel {
+    width: 180px;
+    margin-top: 10px;
+  }
+
+  &__name {
+    grid-area: name;
+  }
+
+  &__tel {
+    grid-area: tel;
+  }
+
+  &__text {
+    min-width: 100%;
+    max-width: 370px;
+    min-height: 70px;
+    max-height: 70px;
+    grid-area: text;
+  }
+
+  &__checkbox {
+    grid-area: checkbox;
+  }
+
+  &__btn {
+    width: 200px;
+    grid-area: btn;
+  }
+
+  &__disclaimer {
+    font-size: 8px !important;
+    line-height: 11px !important;
+    color: #CBCBCB;
+    grid-area: disclaimer;
+  }
+
+  &__link {
+    color: #CBCBCB;
   }
 
 }

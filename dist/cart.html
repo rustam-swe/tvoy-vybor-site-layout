@@ -112,8 +112,90 @@
 
         <!-- Загаловок страницы -->
         <h1 class="page-title section-title">Оформление заказа</h1>
+
+        <div class="cart-wrapper">
+          <section class="cart">
+            <div class="cart__products-count">1 товар в корзине</div>
+            <article class="cart-product">
+              <div class="cart-product__thumb">
+                <img src="./imgs/cart--thumb.png" alt="" class="cart-product__img">
+              </div>
+              <section class="cart-product__content">
+                <header class="cart-product__header">
+                  <h1 class="cart-product__title">Диван Амстердам NEXT цвет Серый</h1>
+                </header>
+                <ul class="full-chars__basic list">
+                  <li class="full-chars__basic-item">
+                    <div class="full-chars__key">Спальное место</div>
+                    <div class="full-chars__value">200 см х 160 см</div>
+                  </li>
+                  <li class="full-chars__basic-item">
+                    <div class="full-chars__key">Габариты</div>
+                    <div class="full-chars__value">113х250 см</div>
+                  </li>
+                  <li class="full-chars__basic-item">
+                    <div class="full-chars__key">Механизм</div>
+                    <div class="full-chars__value">Аккардеон</div>
+                  </li>
+                  <li class="full-chars__basic-item">
+                    <div class="full-chars__key">Цвета</div>
+                    <div class="full-chars__value">Серый</div>
+                  </li>
+                  <li class="full-chars__basic-item">
+                    <div class="full-chars__key">Количество</div>
+                    <div class="full-chars__value"><input type="text"></div>
+                  </li>
+                </ul>
+                <div class="cart-product__price">59 990 &#8381;</div>
+              </section>
+
+            </article>
+            <section class="cart__summary">
+              <div class="with-delivery">
+                <label>
+                  <input type="checkbox">
+                  С доставкой
+                </label>
+                <div class="with-delivery-price">560 &#8381;</div>
+              </div>
+              <div class="cart__total">
+                Итого:
+                <div class="cart__total-price">59 590 &#8381;</div>
+              </div>
+            </section>
+          </section>
+
+          <section class="pay-deliver-options">
+            <div class="form-title">Введите контакты</div>
+            <form action="" class="contact-form contact-form_column">
+              <input type="text" name="name" class="contact-form__name" placeholder="ФИО*" required>
+              <input type="tel" name="tel" class="contact-form__tel" placeholder="Телефон*" required>
+              <input type="email" name="email" class="contact-form__email" placeholder="Email*" required>
+              <input type="text" name="city" class="contact-form__city" placeholder="Москва" required>
+              <input type="text" name="address" class="contact-form__address" placeholder="Адрес доставки*" required>
+              <a href="#" class="contact-form__link link link_underlined">Комментарий к заказу</a>
+            </form>
+
+            <section class="payments">
+              <header class="payments-header">
+                <h1 class="payments-title">Выберите способ оплаты</h1>
+              </header>
+              <ul class="paymets__list list">
+                <li class="payments__methods">
+                  <i class="icon icon_wallet"></i>
+                  Наличные
+                </li>
+                <li class="payments__methods">
+                  <i class="icon icon_card"></i>
+                  Банковская карта
+                </li>
+              </ul>
+              <a href="#" class="payments__btn link btn">Оформить заказ</a>
+            </section>
+          </section>
+        </div>
       </div>
-    </header>
+
 
   </main>
   <footer class="footer">
