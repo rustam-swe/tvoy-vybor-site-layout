@@ -1,0 +1,50 @@
+.about {
+  height: 540px;
+  background: url(../imgs/about--bg-1.jpg);
+
+  &__header {
+    padding-top: 1px;
+  }
+
+  &__title,
+  &__paragraph,
+  &__li {
+    color: #fff;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    text-transform: uppercase;
+  }
+
+  &__paragraph {
+    margin-bottom: 15px;
+    line-height: 18px;
+
+    &_uppercase {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+
+  &__list {
+    list-style-position: inside;
+  }
+
+  &__li {
+    margin-top: 20px
+  }
+
+}
+
+.featured-block {
+  height: 680px;
+  margin-top: 100px;
+  background: url(../imgs/about--bg-2.jpg);
+
+  &__container {
+    padding-left: 50px
+  }
+}
