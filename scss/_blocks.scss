@@ -59,6 +59,7 @@ div[class$="column"] {
   }
 
   &_show-more {
+    width: 250px;
     margin: 75px auto 0;
   }
 
@@ -165,6 +166,8 @@ div[class$="column"] {
     line-height: 44px;
     text-align: center;
     color: $dark-gray;
+    margin-top: 0;
+    padding-top: .6rem;
   }
 
   &__desc {
@@ -181,10 +184,14 @@ div[class$="column"] {
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__item {
     position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    flex-shrink: 0;
     font-size: 14px;
     line-height: 17px;
 
@@ -252,11 +259,18 @@ div[class$="column"] {
     display: grid;
     grid-gap: 25px;
     grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
   }
 
   &__product {
+    // Полужегние по умодчанию: вертикально
     position: relative;
+    width: 100%; // width: 258px;
+    height: 318px;
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 15px 25px;
     border: 1px solid #B0B0B0;
     border-radius: 10px;
     cursor: pointer;
@@ -271,6 +285,7 @@ div[class$="column"] {
       height: 160px;
       padding-top: 15px;
       padding-bottom: 15px;
+      flex-direction: row;
       font-weight: bold;
       font-size: 18px;
       // line-height: 22px;
@@ -278,19 +293,6 @@ div[class$="column"] {
       // &>section {
       //   width: 50%
       // }
-    }
-
-    &_vertical {
-      width: 258px;
-      height: 318px;
-      flex-direction: column;
-      padding: 15px 25px;
-    }
-
-    &_large {
-      width: 717px; // 737px;
-      height: 345px;
-      padding: 0;
     }
   }
 
@@ -305,6 +307,7 @@ div[class$="column"] {
   &__info {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     // margin-top: 20px
   }
 
@@ -363,7 +366,8 @@ div[class$="column"] {
     @extend %flexCenterXY;
     position: absolute;
     top: -1px;
-    right: -1px;
+    // right: -1px; Перенесено в XL
+    left: -1px;
     height: 35px;
     padding: 5px;
     color: $dark-gray;
@@ -398,26 +402,9 @@ div[class$="column"] {
 .testimonials {
   padding-bottom: 60px;
 
-  &__title {
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 44px;
-    color: $dark-gray;
-  }
-
-  &__list {
-    display: flex;
-    justify-content: space-between;
-  }
-
   &__article {
-    max-width: 340px;
     font-size: 19px;
     line-height: 23px;
-
-    &:not(:first-child) {
-      margin-left: 40px;
-    }
 
     &-header {
       display: flex;
@@ -650,24 +637,14 @@ div[class$="column"] {
 .subscription {
   display: flex;
   align-items: flex-start;
-  padding-top: 70px;
-  padding-bottom: 70px;
-
-
-  &__header,
-  &__form-column {
-    flex-basis: 0;
-    flex-grow: 1;
-  }
 
   &__header {
     color: $secondary-color;
   }
 
   &__title {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 30px;
+    margin: 0;
+    font-size: 20px;
     font-weight: bold;
     line-height: 37px;
   }
@@ -679,16 +656,18 @@ div[class$="column"] {
 
   &__form {
     display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 
     &-column {
+      margin-top: 10px;
       flex-direction: column;
     }
   }
 
   &__input {
-    width: 344px;
     height: 40px;
     padding-left: 13px
   }
@@ -697,6 +676,7 @@ div[class$="column"] {
     height: 40px;
     font-size: 24px;
     line-height: 29px;
+    text-transform: none;
   }
 
   &__privacy-policy {
@@ -717,10 +697,17 @@ div[class$="column"] {
 
   &__label {
     margin-left: 10px;
-    margin-right: 30px
+    margin-right: 25px; // 30px
   }
 
   &__link {
     text-decoration: underline;
   }
+}
+
+.privacy-policy,
+.developer {
+  font-size: 14px;
+  line-height: 19px;
+  font-family: $secondary-font;
 }

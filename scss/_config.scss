@@ -47,22 +47,14 @@ $round: 50px;
 
 
 // Медиа запросы
-
-@mixin mediaXs {
-  @media screen and (min-width: 480px) {
+@mixin mediaXl {
+  @media screen and (min-width: 1200px) {
     @content;
   }
 }
 
-@mixin mediaSm {
-  @media screen and (max-width: 767px) {
-    @content;
-  }
-}
-
-
-@mixin mediaMd {
-  @media screen and (min-width: 768px) {
+@mixin mediaLg-Max {
+  @media screen and (max-width: 1199px) {
     @content;
   }
 }
@@ -73,8 +65,33 @@ $round: 50px;
   }
 }
 
-@mixin mediaXl {
-  @media screen and (min-width: 1200px) {
+// Для шапки
+@mixin mediaMd-Max {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaSm-Max {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin mediaXs {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin media-MinMax-600-767 {
+  @media screen and (min-width: 600px) and (max-width:767px) {
     @content;
   }
 }

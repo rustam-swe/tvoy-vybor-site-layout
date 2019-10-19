@@ -1,5 +1,5 @@
 // Меню бургер
-/*
+
 const menuBtn = document.querySelector('.menu-btn'); // Кнопка меню
 const headerNav = document.querySelector('.nav'); // Блок с меню
 const headerMenu = document.querySelector('.nav__menu'); // Меню
@@ -43,6 +43,7 @@ function noScroll() {
   window.scroll(0, 0);
 }
 
+/*
 // Плавная прокрутка к секциям
 
 headerMenu.addEventListener("click", (e) => {
@@ -76,6 +77,19 @@ $(document).ready(function () {
     dots: false,
     focusOnSelect: true
   });
+
+  // Слайдер отзывов
+
+  $('.testimonials__list').slick({
+    mobileFirst: true,
+    // centerMode: true,
+    // centerPadding: '60px',
+    slidesToShow: 1,
+    responsive: [{
+      breakpoint: 768,
+      settings: "unslick"
+    }]
+  })
 });
 
 

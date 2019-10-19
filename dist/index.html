@@ -78,9 +78,84 @@
 
       <!-- Основное меню -->
       <nav class="nav flex">
+        <div class="menu-btn">
+          <div class="menu-btn__line"></div>
+          <div class="menu-btn__line"></div>
+          <div class="menu-btn__line"></div>
+        </div>
         <ul class="nav__menu list">
           <li class="nav__item"><a href="#" class="nav__link link bold">Диваны</a></li>
-          <li class="nav__item"><a href="#" class="nav__link link bold">Гостинная</a></li>
+          <li class="nav__item">
+            <a href="#" class="nav__link link bold">Гостиная</a>
+            <div class="nav__dropdown">
+              <ul class="nav__sub-menu nav__elected-menu list">
+                <li class="nav__sub-item nav__elected-item">
+                  <a href="#" class="nav__sub-link link">Прямые диваны</a>
+                </li>
+                <li class="nav__sub-item nav__elected-item">
+                  <a href="#" class="nav__sub-link link">Угловые диваны</a>
+                </li>
+                <li class="nav__sub-item nav__elected-item">
+                  <a href="#" class="nav__sub-link link">Модульные диваны</a>
+                </li>
+                <li class="nav__sub-item nav__elected-item">
+                  <a href="#" class="nav__sub-link link">Кушетки</a>
+                </li>
+                <li class="nav__sub-item nav__elected-item">
+                  <a href="#" class="nav__sub-link link">Диваны-кровати</a>
+                </li>
+              </ul>
+              <ul class="nav__sub-menu list">
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Прямые тканевые диваны</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Прямые кожаные диваны</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Угловые тканевые диваны</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Угловые кожаные диваны</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Диваны на металлокаркасе</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Диваны с ортопедическим эффектом</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Детские диваны</a>
+                </li>
+              </ul>
+              <ul class="nav__sub-menu list">
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Дельфин (<span class="nav__category-count">22</span>)</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Аккардеон (<span class="nav__category-count">22</span>)</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Еврокнижка (<span class="nav__category-count">22</span>)</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Книжка (<span class="nav__category-count">22</span>)</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Выкатаные (<span class="nav__category-count">22</span>)</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Клик-кляк (<span class="nav__category-count">22</span>)</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Седафлекс (<span class="nav__category-count">22</span>)</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Тик-так (<span class="nav__category-count">22</span>)</a>
+                </li>
+              </ul>
+            </div>
+          </li>
           <li class="nav__item"><a href="#" class="nav__link link bold">Десткая мебель</a></li>
           <li class="nav__item"><a href="#" class="nav__link link bold">Спальни</a></li>
           <li class="nav__item"><a href="#" class="nav__link link bold">Матрасы</a></li>
@@ -191,7 +266,7 @@
         </div>
 
         <div class="products__grid">
-          <article class="products__product products__product_vertical">
+          <article class="products__product">
             <div class="products__discount-percentage">-20%</div>
             <section class="products__thumb products__thumb_vertical">
               <img src="./imgs/matras--optima-1.png" alt="Матрас 140x200 Optima Classic EVS" class="recomended__img">
@@ -199,12 +274,14 @@
             <section class="products__info">
               <h4 class="products__name">Матрас 140x200</h4>
               <h3 class="products__model">Optima Classic EVS</h3>
-              <div class="products__price">8 730 &#8381;</div>
-              <div class="products__price_original">8 730 &#8381;</div>
+              <div class="products__price-wrapper">
+                <div class="products__price">8 730 &#8381;</div>
+                <div class="products__price_original">8 730 &#8381;</div>
+              </div>
               <div class="products__sign">Качественная поддержка позвоночника</div>
             </section>
           </article>
-          <article class="products__product products__product_vertical">
+          <article class="products__product">
             <div class="products__discount-percentage">-20%</div>
             <section class="products__thumb products__thumb_vertical">
               <img src="./imgs/matras--optima-1.png" alt="Матрас 140x200 Optima Classic EVS" class="recomended__img">
@@ -212,12 +289,14 @@
             <section class="products__info">
               <h4 class="products__name">Матрас 140x200</h4>
               <h3 class="products__model">Optima Classic EVS</h3>
-              <div class="products__price">8 730 &#8381;</div>
-              <div class="products__price_original">8 730 &#8381;</div>
+              <div class="products__price-wrapper">
+                <div class="products__price">8 730 &#8381;</div>
+                <div class="products__price_original">8 730 &#8381;</div>
+              </div>
               <div class="products__sign">Качественная поддержка позвоночника</div>
             </section>
           </article>
-          <article class="products__product products__product_vertical">
+          <article class="products__product">
             <div class="products__discount-percentage">-20%</div>
             <section class="products__thumb products__thumb_vertical">
               <img src="./imgs/matras--optima-1.png" alt="Матрас 140x200 Optima Classic EVS" class="recomended__img">
@@ -225,12 +304,14 @@
             <section class="products__info">
               <h4 class="products__name">Матрас 140x200</h4>
               <h3 class="products__model">Optima Classic EVS</h3>
-              <div class="products__price">8 730 &#8381;</div>
-              <div class="products__price_original">8 730 &#8381;</div>
+              <div class="products__price-wrapper">
+                <div class="products__price">8 730 &#8381;</div>
+                <div class="products__price_original">8 730 &#8381;</div>
+              </div>
               <div class="products__sign">Качественная поддержка позвоночника</div>
             </section>
           </article>
-          <article class="products__product products__product_vertical">
+          <article class="products__product">
             <div class="products__discount-percentage">-20%</div>
             <section class="products__thumb products__thumb_vertical">
               <img src="./imgs/matras--optima-1.png" alt="Матрас 140x200 Optima Classic EVS" class="recomended__img">
@@ -238,8 +319,10 @@
             <section class="products__info">
               <h4 class="products__name">Матрас 140x200</h4>
               <h3 class="products__model">Optima Classic EVS</h3>
-              <div class="products__price">8 730 &#8381;</div>
-              <div class="products__price_original">8 730 &#8381;</div>
+              <div class="products__price-wrapper">
+                <div class="products__price">8 730 &#8381;</div>
+                <div class="products__price_original">8 730 &#8381;</div>
+              </div>
               <div class="products__sign">Качественная поддержка позвоночника</div>
             </section>
           </article>
@@ -372,11 +455,11 @@
     <!-- Хиты продаж -->
     <section class="sales-hits">
       <div class="container">
-        <header class="sales-hits__header">
-          <h1 class="sales-hits__title">Товар дня</h1>
+        <header class="section__header">
+          <h1 class="section__title">Хиты продаж</h1>
         </header>
         <div class="products__grid">
-          <article class="products__product products__product_vertical">
+          <article class="products__product">
             <div class="products__discount-percentage">-20%</div>
             <section class="products__thumb products__thumb_vertical">
               <img src="./imgs/matras--optima-1.png" alt="Матрас 140x200 Optima Classic EVS" class="recomended__img">
@@ -384,12 +467,14 @@
             <section class="products__info">
               <h4 class="products__name">Матрас 140x200</h4>
               <h3 class="products__model">Optima Classic EVS</h3>
-              <div class="products__price">8 730 &#8381;</div>
-              <div class="products__price_original">8 730 &#8381;</div>
+              <div class="products__price-wrapper">
+                <div class="products__price">8 730 &#8381;</div>
+                <div class="products__price_original">8 730 &#8381;</div>
+              </div>
               <div class="products__sign">Качественная поддержка позвоночника</div>
             </section>
           </article>
-          <article class="products__product products__product_vertical">
+          <article class="products__product">
             <div class="products__discount-percentage">-20%</div>
             <section class="products__thumb products__thumb_vertical">
               <img src="./imgs/matras--optima-1.png" alt="Матрас 140x200 Optima Classic EVS" class="recomended__img">
@@ -397,12 +482,14 @@
             <section class="products__info">
               <h4 class="products__name">Матрас 140x200</h4>
               <h3 class="products__model">Optima Classic EVS</h3>
-              <div class="products__price">8 730 &#8381;</div>
-              <div class="products__price_original">8 730 &#8381;</div>
+              <div class="products__price-wrapper">
+                <div class="products__price">8 730 &#8381;</div>
+                <div class="products__price_original">8 730 &#8381;</div>
+              </div>
               <div class="products__sign">Качественная поддержка позвоночника</div>
             </section>
           </article>
-          <article class="products__product products__product_vertical">
+          <article class="products__product">
             <div class="products__discount-percentage">-20%</div>
             <section class="products__thumb products__thumb_vertical">
               <img src="./imgs/matras--optima-1.png" alt="Матрас 140x200 Optima Classic EVS" class="recomended__img">
@@ -410,12 +497,14 @@
             <section class="products__info">
               <h4 class="products__name">Матрас 140x200</h4>
               <h3 class="products__model">Optima Classic EVS</h3>
-              <div class="products__price">8 730 &#8381;</div>
-              <div class="products__price_original">8 730 &#8381;</div>
+              <div class="products__price-wrapper">
+                <div class="products__price">8 730 &#8381;</div>
+                <div class="products__price_original">8 730 &#8381;</div>
+              </div>
               <div class="products__sign">Качественная поддержка позвоночника</div>
             </section>
           </article>
-          <article class="products__product products__product_vertical">
+          <article class="products__product">
             <div class="products__discount-percentage">-20%</div>
             <section class="products__thumb products__thumb_vertical">
               <img src="./imgs/matras--optima-1.png" alt="Матрас 140x200 Optima Classic EVS" class="recomended__img">
@@ -423,8 +512,10 @@
             <section class="products__info">
               <h4 class="products__name">Матрас 140x200</h4>
               <h3 class="products__model">Optima Classic EVS</h3>
-              <div class="products__price">8 730 &#8381;</div>
-              <div class="products__price_original">8 730 &#8381;</div>
+              <div class="products__price-wrapper">
+                <div class="products__price">8 730 &#8381;</div>
+                <div class="products__price_original">8 730 &#8381;</div>
+              </div>
               <div class="products__sign">Качественная поддержка позвоночника</div>
             </section>
           </article>
@@ -435,8 +526,8 @@
     <!-- Отзывы о товарах -->
     <section class="testimonials">
       <div class="container">
-        <header class="testimonials__header">
-          <h1 class="testimonials__title">Отзывы о товарах</h1>
+        <header class="section__header">
+          <h1 class="section__title">Отзывы о товарах</h1>
         </header>
         <div class="testimonials__list">
           <article class="testimonials__article">
@@ -517,7 +608,7 @@
 
 
         </div>
-        <button class="btn btn_bordered btn_show-more">Показать еще</button>
+        <a href="#" class="link btn btn_bordered btn_show-more">Показать еще</a>
       </div>
     </section>
 
@@ -534,24 +625,24 @@
           <form action="" class="subscription__form">
             <input type="text" class="subscription__input" placeholder="Введите email" required>
             <button class="subscription__btn btn">Подписаться</button>
+            <div class="subscription__privacy-policy">
+              <div class="subscription__checkbox">
+                <input id="privacy-policy" type="checkbox">
+                <label class="subscription__label" for="privacy-policy">Я согласен с <a href="#"
+                    class="subscription__link link">политикой
+                    конфеденциальности</a></label>
+              </div>
+              <div class="subscription__checkbox">
+                <input id="subscribe-agree" type="checkbox">
+                <label class="subscription__label" for="privacy-policy">Я хочу получать рассылки от Твой выбор</label>
+              </div>
+            </div>
           </form>
-          <div class="subscription__privacy-policy">
-            <div class="subscription__checkbox">
-              <input id="privacy-policy" type="checkbox">
-              <label class="subscription__label" for="privacy-policy">Я согласен с <a href="#"
-                  class="subscription__link link">политикой
-                  конфеденциальности</a></label>
-            </div>
-            <div class="subscription__checkbox">
-              <input id="subscribe-agree" type="checkbox">
-              <label class="subscription__label" for="privacy-policy">Я хочу получать рассылки от Твой выбор</label>
-            </div>
-          </div>
         </div>
       </section>
 
       <nav class="footer__nav">
-        <section class="footer__nav-section">
+        <section class="footer__nav-section footer__nav-menu">
           <h3 class="footer__title">Товары</h3>
           <ul class="products-menu footer-menu list">
             <li class="footer-menu__item">
@@ -578,7 +669,7 @@
           </ul>
         </section>
 
-        <section class="footer__nav-section">
+        <section class="footer__nav-section footer__nav-menu">
           <h3 class="footer__title">Покупателю</h3>
           <ul class="customers-menu footer-menu list">
             <li class="footer-menu__item">
@@ -605,7 +696,7 @@
           </ul>
         </section>
 
-        <section class="footer__nav-section">
+        <section class="footer__nav-section footer__nav-menu">
           <h3 class="footer__title">Твой выбор</h3>
           <ul class="company-menu footer-menu list">
             <li class="footer-menu__item">
@@ -632,7 +723,7 @@
           </ul>
         </section>
 
-        <section class="footer__nav-section">
+        <section class="footer__nav-section footer__nav-contacts">
           <h3 class="footer__title">Контакты</h3>
           <div class="socials">
             <a href="#" class="socials__link socials__vk"></a>
@@ -666,6 +757,8 @@
       </div>
     </section>
   </footer>
+
+  <div class="light-box"></div>
 
   <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
   <script src="./js/slick.min.js"></script>
