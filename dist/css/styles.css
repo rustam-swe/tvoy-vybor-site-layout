@@ -1504,6 +1504,10 @@ div[class$="column"] {
   line-height: 19px;
   color: #CBCBCB; }
 
+.cart-main {
+  margin-bottom: 50px;
+  background: #fff; }
+
 .cart-wrapper {
   display: flex;
   justify-content: space-between;
@@ -1539,7 +1543,23 @@ div[class$="column"] {
 
 .cart__summary {
   margin-top: 40px;
-  margin-left: 300px; }
+  margin-left: 280px; }
+
+.cart-payments {
+  margin-top: 30px; }
+  .cart-payments__methods {
+    display: flex;
+    align-items: center; }
+    .cart-payments__methods:not(:first-child) {
+      margin-top: 20px; }
+  .cart-payments .icon_wallet,
+  .cart-payments .icon_card {
+    width: 36px;
+    height: 36px;
+    margin-right: 15px; }
+  .cart-payments__btn {
+    margin-top: 25px;
+    text-transform: initial; }
 
 .pay-deliver-options {
   width: 280px;
@@ -1549,24 +1569,8 @@ div[class$="column"] {
     margin-top: 15px; }
   .pay-deliver-options input {
     margin: 0; }
-  .pay-deliver-options .link {
+  .pay-deliver-options .link:not(.btn) {
     color: #333; }
-
-.payments__methods {
-  display: flex;
-  align-items: center; }
-  .payments__methods:not(:first-child) {
-    margin-top: 20px; }
-
-.payments .icon_wallet,
-.payments .icon_card {
-  width: 36px;
-  height: 36px;
-  margin-right: 15px; }
-
-.payments__btn {
-  margin-top: 25px;
-  text-transform: initial; }
 
 .cart__products-count,
 .form-title,
@@ -1847,7 +1851,20 @@ div[class$="column"] {
       display: initial; }
   .title-bar__title {
     margin-top: 25px;
-    font-size: 30px; } }
+    font-size: 30px; }
+  .cart {
+    display: flex;
+    flex-direction: column; }
+    .cart-product {
+      padding-bottom: 20px;
+      flex-direction: column; }
+      .cart-product__content {
+        margin-left: 0; }
+      .cart-product__price {
+        margin-top: 20px; }
+    .cart__summary {
+      margin-top: 20px;
+      margin-left: 0; } }
 
 @media screen and (min-width: 768px) {
   .products__grid {
@@ -1964,6 +1981,19 @@ div[class$="column"] {
     margin-top: 50px; }
     .featured-block__container {
       padding-left: 15px; }
+  .cart-wrapper {
+    flex-direction: column; }
+  .cart-product {
+    margin-top: 20px; }
+    .cart-product__thumb {
+      align-self: center; }
+  .pay-deliver-options {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
   .testimonials {
     margin: 0 auto;
     padding-bottom: 60px; }

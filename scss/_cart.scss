@@ -1,4 +1,8 @@
 .cart {
+  &-main {
+    margin-bottom: 50px;
+    background: #fff;
+  }
 
   &-wrapper {
     display: flex;
@@ -52,7 +56,32 @@
 
   &__summary {
     margin-top: 40px;
-    margin-left: 300px
+    margin-left: 280px; // 300px 
+  }
+
+  &-payments {
+    margin-top: 30px;
+
+    &__methods {
+      display: flex;
+      align-items: center;
+
+      &:not(:first-child) {
+        margin-top: 20px
+      }
+    }
+
+    & .icon_wallet,
+    & .icon_card {
+      width: 36px;
+      height: 36px;
+      margin-right: 15px;
+    }
+
+    &__btn {
+      margin-top: 25px;
+      text-transform: initial;
+    }
   }
 }
 
@@ -69,33 +98,11 @@
     margin: 0
   }
 
-  & .link {
+  & .link:not(.btn) {
     color: $dark-gray
   }
 }
 
-.payments {
-  &__methods {
-    display: flex;
-    align-items: center;
-
-    &:not(:first-child) {
-      margin-top: 20px
-    }
-  }
-
-  & .icon_wallet,
-  & .icon_card {
-    width: 36px;
-    height: 36px;
-    margin-right: 15px;
-  }
-
-  &__btn {
-    margin-top: 25px;
-    text-transform: initial;
-  }
-}
 
 .cart__products-count,
 .form-title,
