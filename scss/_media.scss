@@ -396,6 +396,7 @@
   .payments {
     padding-top: 50px;
     padding-bottom: 50px;
+
     &__title {
       font-size: 25px;
       line-height: 1.6;
@@ -600,6 +601,28 @@
 
   }
 
+  // Контакты
+  .contacts {
+    &-container {
+      justify-content: center;
+    }
+
+    &-title {
+      text-align: center;
+    }
+
+    &-info {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  .contact-form {
+    &__btn {
+      justify-self: center
+    }
+  }
+
   // Форма рассылки
 
   .subscription {
@@ -646,6 +669,50 @@
     &__product {
       width: 100%;
       // max-width: 350px; SM
+    }
+  }
+
+  .map {
+    position: static;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    &__container {
+      position: static;
+      padding-left: 0;
+      padding-right: 0;
+      transform: translateX(0);
+      order: 1
+    }
+
+    & iframe {
+      order: 2
+    }
+  }
+
+  .address {
+    width: 100%;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .contact {
+    &-form {
+      width: 100%;
+      grid-template-areas:
+        "name"
+        "tel"
+        "text"
+        "checkbox"
+        "btn"
+        "disclaimer";
+
+      &__name,
+      &__tel {
+        width: 100%
+      }
     }
   }
 
