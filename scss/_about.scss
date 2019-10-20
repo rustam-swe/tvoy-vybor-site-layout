@@ -1,6 +1,13 @@
+.about,
+.featured-block {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .about {
   height: 540px;
-  background: url(../imgs/about--bg-1.jpg);
+  background-image: url(../imgs/about--bg-1.jpg);
 
   &__header {
     padding-top: 1px;
@@ -13,10 +20,8 @@
   }
 
   &__title {
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 44px;
     text-transform: uppercase;
+    text-align: left;
   }
 
   &__paragraph {
@@ -42,7 +47,7 @@
 .featured-block {
   height: 680px;
   margin-top: 100px;
-  background: url(../imgs/about--bg-2.jpg);
+  background-image: url(../imgs/about--bg-2.jpg);
 
   &__container {
     padding-left: 50px
