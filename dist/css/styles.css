@@ -1458,9 +1458,16 @@ div[class$="column"] {
   margin-top: 30px; }
 
 .map {
+  position: relative;
   width: 100%;
-  height: 340px;
-  background: url(../imgs/map.jpg) no-repeat; }
+  height: 340px; }
+  .map-wrapper {
+    padding-bottom: 20px; }
+  .map__container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); }
 
 .address {
   width: 340px;
@@ -1476,9 +1483,10 @@ div[class$="column"] {
     font-weight: 600; }
 
 .contacts-wrapper {
-  margin: 20px 0;
+  margin-top: 20px;
   padding-top: 20px;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  background-color: #fff; }
 
 .contacts-container {
   display: flex;
@@ -2015,6 +2023,15 @@ div[class$="column"] {
     .testimonials .slick-next {
       right: 0;
       background-position: center right; }
+  .contacts-container {
+    justify-content: center; }
+  .contacts-title {
+    text-align: center; }
+  .contacts-info {
+    width: 100%;
+    margin-left: 0; }
+  .contact-form__btn {
+    justify-self: center; }
   .subscription {
     flex-direction: column; }
     .subscription__input {
@@ -2033,6 +2050,29 @@ div[class$="column"] {
 @media screen and (max-width: 480px) {
   .products__product {
     width: 100%; }
+  .map {
+    position: static;
+    height: auto;
+    display: flex;
+    flex-direction: column; }
+    .map__container {
+      position: static;
+      padding-left: 0;
+      padding-right: 0;
+      transform: translateX(0);
+      order: 1; }
+    .map iframe {
+      order: 2; }
+  .address {
+    width: 100%;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px; }
+  .contact-form {
+    width: 100%;
+    grid-template-areas: "name" "tel" "text" "checkbox" "btn" "disclaimer"; }
+    .contact-form__name, .contact-form__tel {
+      width: 100%; }
   .footer {
     padding-top: 20px; }
     .footer__container {
