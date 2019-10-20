@@ -1596,18 +1596,22 @@ div[class$="column"] {
     font-size: 24px;
     line-height: 33px; }
 
+.about,
+.featured-block {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
 .about {
   height: 540px;
-  background: url(../imgs/about--bg-1.jpg); }
+  background-image: url(../imgs/about--bg-1.jpg); }
   .about__header {
     padding-top: 1px; }
   .about__title, .about__paragraph, .about__li {
     color: #fff; }
   .about__title {
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 44px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-align: left; }
   .about__paragraph {
     margin-bottom: 15px;
     line-height: 18px; }
@@ -1622,7 +1626,7 @@ div[class$="column"] {
 .featured-block {
   height: 680px;
   margin-top: 100px;
-  background: url(../imgs/about--bg-2.jpg); }
+  background-image: url(../imgs/about--bg-2.jpg); }
   .featured-block__container {
     padding-left: 50px; }
 
@@ -1871,7 +1875,8 @@ div[class$="column"] {
     margin: 0;
     font-size: 20px; }
   .section__title {
-    font-size: 26px; }
+    font-size: 25px;
+    line-height: 30px; }
   .payments {
     padding-top: 50px;
     padding-bottom: 50px; }
@@ -1950,6 +1955,15 @@ div[class$="column"] {
     .features__sub-item {
       width: 100%;
       padding: 0; }
+  .about,
+  .featured-block {
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px; }
+  .featured-block {
+    margin-top: 50px; }
+    .featured-block__container {
+      padding-left: 15px; }
   .testimonials {
     margin: 0 auto;
     padding-bottom: 60px; }
