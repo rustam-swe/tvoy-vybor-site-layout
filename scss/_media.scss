@@ -322,6 +322,30 @@
       font-size: 30px;
     }
   }
+
+  // Корзина
+  .cart {
+    display: flex;
+    flex-direction: column;
+
+    &-product {
+      padding-bottom: 20px;
+      flex-direction: column;
+
+      &__content {
+        margin-left: 0;
+      }
+
+      &__price {
+        margin-top: 20px;
+      }
+    }
+
+    &__summary {
+      margin-top: 20px;
+      margin-left: 0;
+    }
+  }
 }
 
 // min-width: 768px
@@ -574,6 +598,30 @@
     }
   }
 
+  // Корзина
+  .cart {
+    &-wrapper {
+      flex-direction: column;
+    }
+
+    &-product {
+      margin-top: 20px;
+
+      &__thumb {
+        align-self: center;
+      }
+    }
+  }
+
+  .pay-deliver-options {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   // Отзывы о товарах
 
   .testimonials {
@@ -655,6 +703,7 @@
     }
   }
 }
+
 
 // Мобильные телефоны
 
