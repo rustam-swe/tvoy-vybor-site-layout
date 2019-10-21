@@ -37,7 +37,13 @@
 
   .slick-next {
     right: -25px;
+  }
 
+  &__slide-nav.slick-current {
+    .pcard__slide-thumb {
+      border: 1px solid $primary-color;
+      border-radius: 5px
+    }
   }
 
   &__title {
@@ -214,5 +220,13 @@
 
   &__container {
     margin-top: 30px
+  }
+
+  &__content {
+    display: none;
+
+    &_active {
+      display: flex
+    }
   }
 }

@@ -227,13 +227,17 @@
 
         <div class="tabs">
 
-          <ul class="tabs__btns">
-            <li class="tabs__tab">Отзывы (3)</li>
-            <li class="tabs__tab tabs__tab_active">Описание</li>
+          <ul class="tabs__btns" data-tabgroup="first-tab-group">
+            <li>
+              <a href="#tab1" class="tabs__tab tabs__tab_active link">Отзывы <span class="testimonials-count">(3)</span></a>
+            </li>
+            <li>
+              <a href="#tab2" class="tabs__tab link">Описание</a>
+            </li>
           </ul>
 
-          <article class="tabs__container">
-            <section class="testimonials tabs__content">
+          <article id="first-tab-group" class="tabs__container">
+            <section id="tab1" class="testimonials tabs__content tabs__content_active">
               <div class="testimonials__list">
                 <article class="testimonials__article">
                   <header class="testimonials__article-header">
@@ -320,7 +324,7 @@
 
               </div>
             </section>
-            <!-- <section class="full-chars tabs__content">
+            <section id="tab2" class="full-chars tabs__content">
               <section class="full-chars__section">
                 <header class="full-chars__header">
                   <h1 class="full-chars__title">Характерисктики</h1>
@@ -394,7 +398,7 @@
                 <p>Материал обивки — ткань.</p>
 
               </section>
-            </section> -->
+            </section>
           </article>
         </div>
 

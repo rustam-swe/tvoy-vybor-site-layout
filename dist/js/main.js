@@ -89,7 +89,50 @@ $(document).ready(function () {
       breakpoint: 992,
       settings: "unslick"
     }]
-  })
+  });
+
+  // Табы
+
+  /* 
+    $('.tabs__container > section').hide();
+      $('.tabs__container > section:first-of-type').show();
+      $('.tabs__btns a').click(function (e) {
+        e.preventDefault();
+        var $this = $(this),
+          tabgroup = '#' + $this.parents('.tabs__btns').data('tabgroup'),
+          others = $this.closest('li').siblings().children('a'),
+          target = $this.attr('href');
+        others.removeClass('active');
+        $this.addClass('active');
+        $(tabgroup).children('div').hide();
+        $(target).show();
+
+      })
+    */
+
+  // Табы на странице новости
+  const tabLinks = document.querySelectorAll('.tabs__tab'); // Вкладки
+  const tabContent = document.querySelectorAll('.tabs__content'); // Содержимое
+  // const tabLinkContainer = document.querySelector('.tabs__btns');
+
+  tabLinks.forEach(tab => tab.addEventListener('click', switchTab))
+
+  function switchTab(e) {
+    e.preventDefault()
+
+    tabLinks.forEach(link => {
+      link.classList.remove('tabs__tab_active');
+    });
+
+    e.target.classList.add('tabs__tab_active');
+
+    tabContent.forEach(content => {
+      content.classList.remove('tabs__content_active');
+    });
+
+    let activeTab = e.target.getAttribute('href').slice(1);
+    document.getElementById(activeTab).classList.add('tabs__content_active')
+  }
 });
 
 

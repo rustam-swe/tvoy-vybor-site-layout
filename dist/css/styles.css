@@ -1365,6 +1365,9 @@ div[class$="column"] {
       left: -25px; }
   .pcard .slick-next {
     right: -25px; }
+  .pcard__slide-nav.slick-current .pcard__slide-thumb {
+    border: 1px solid #633176;
+    border-radius: 5px; }
   .pcard__title {
     margin-top: 0;
     margin-bottom: 10px;
@@ -1468,6 +1471,10 @@ div[class$="column"] {
   padding-right: 30px; }
   .tabs__container {
     margin-top: 30px; }
+  .tabs__content {
+    display: none; }
+    .tabs__content_active {
+      display: flex; }
 
 .map {
   position: relative;
