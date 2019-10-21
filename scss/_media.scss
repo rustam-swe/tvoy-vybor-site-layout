@@ -64,6 +64,36 @@
       margin-top: 40px
     }
   }
+
+  // Карточка товара
+  .pcard {
+    width: 100%;
+
+    &__slider-section {
+      width: 600px
+    }
+
+    &__info-section {
+      margin-right: 0
+    }
+  }
+
+  .full-chars {
+    flex-wrap: wrap;
+
+    &__section {
+      width: 46%;
+    }
+  }
+
+  // Отзывы на стр. карточка товара
+  .testimonials{
+    &__article-header{
+      flex-direction: column
+    }
+    &__thumb {
+    align-self: center
+  }}
 }
 
 // Настольные
@@ -320,6 +350,56 @@
     &__title {
       margin-top: 25px;
       font-size: 30px;
+    }
+  }
+
+  // Карточка товара
+  .pcard {
+    &__slider-section {
+      width: 400px
+    }
+
+    &__info-section {
+      width: 210px
+    }
+
+    &__price_big {
+      margin-top: 0;
+      font-size: 30px;
+      line-height: 1.6;
+    }
+
+    &__brief-characteristics {
+      margin-top: 0;
+    }
+
+    &__key_vertical,
+    &__value_vertical,
+    &__char-item {
+      margin-top: 0 !important;
+    }
+
+    &__btn {
+      margin-top: 10px;
+    }
+
+  }
+
+  .tabs {
+    &__tab_active {
+      background-size: contain;
+    }
+  }
+
+  .testimonials {
+    &__list {
+      .slick-prev {
+        left: -80px
+      }
+
+      .slick-next {
+        right: -70px
+      }
     }
   }
 
@@ -622,6 +702,68 @@
     align-items: center;
   }
 
+  // Карточка товара
+  .pcard {
+    &__box {
+      flex-direction: column;
+
+      &-separator {
+        display: none
+      }
+    }
+
+    &__slider-section {
+      width: 100%;
+    }
+
+    &__info-section {
+      width: 100%;
+      margin-top: 50px;
+    }
+
+    &__brief-characteristics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 0 50px;
+      grid-template-areas:
+        "size btns"
+        "style btns"
+        "interior delivery"
+        "mechanism delivery"
+        "colors .";
+    }
+
+    // Слайдер "основной"
+    &__slider-nav {
+      & .slick {
+        &-list {
+          width: 92%;
+          margin: 0 auto;
+        }
+
+        &-prev {
+          left: -10px;
+        }
+
+        &-next {
+          right: -10px
+        }
+      }
+
+    }
+
+    // Слайдер "навигационный"
+
+  }
+
+  .full-chars {
+    &__section {
+      width: 100%;
+      flex-grow: 1
+    }
+  }
+
+
   // Отзывы о товарах
 
   .testimonials {
@@ -782,6 +924,23 @@
       }
     }
   }
+
+
+  // Карточка товара
+  .pcard {
+    &__brief-characteristics {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "size"
+        "style"
+        "interior"
+        "mechanism"
+        "colors"
+        "btns"
+        "delivery";
+    }
+  }
+
 
   .footer {
     padding-top: 20px;

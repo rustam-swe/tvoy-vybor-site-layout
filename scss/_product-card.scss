@@ -15,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     padding-top: 30px;
-    padding-left: 15px; // bootstrap container padding-left: 15px + 15px - 30px
+    // padding-left: 15px; // bootstrap container padding-left: 15px + 15px - 30px
     font-family: $secondary-font;
 
     &-separator {
@@ -105,9 +105,34 @@
     margin-top: 10px; // 15px;
   }
 
+  &__style {
+    grid-area: style
+  }
+
+  &__interior {
+    grid-area: interior
+  }
+
+  &__mechanism {
+    grid-area: mechanism
+  }
+
+  &__colors {
+    grid-area: colors
+  }
+
+  &__btns {
+    grid-area: btns
+  }
+
+  &__delivery {
+    grid-area: delivery
+  }
+
   &__sizes {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    grid-area: size
   }
 
   &__sleeping-size,
@@ -150,7 +175,8 @@
   // }
 
   &__btn {
-    width: 200px;
+    width: 100%; // - в макете 200px
+    height: 40px;
     text-decoration: none;
     font-size: 15px;
     line-height: 18px;
@@ -185,8 +211,8 @@
   margin-top: 60px;
   padding-left: 30px;
   padding-right: 30px;
-}
 
-.tab__container {
-  margin-top: 30px
+  &__container {
+    margin-top: 30px
+  }
 }

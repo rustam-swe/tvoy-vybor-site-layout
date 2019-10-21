@@ -86,7 +86,7 @@ $(document).ready(function () {
     // centerPadding: '60px',
     slidesToShow: 1,
     responsive: [{
-      breakpoint: 768,
+      breakpoint: 992,
       settings: "unslick"
     }]
   })
