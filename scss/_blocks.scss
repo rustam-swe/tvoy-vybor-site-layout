@@ -78,6 +78,7 @@ div[class$="column"] {
   height: 26px;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
 
   &_user {
     background-image: url(../imgs/user.svg);
@@ -95,35 +96,12 @@ div[class$="column"] {
 
   &_filter {
     background-image: url(../imgs/filter.svg);
-    margin-left: 40px;
-    margin-right: 40px;
+    // margin-left: 40px;
+    // margin-right: 40px;
   }
 
   &_search {
     background-image: url(../imgs/search.svg);
-  }
-
-  &__badge {
-    @extend %flexCenterXY;
-
-    position: absolute;
-    width: 16px;
-    height: 9px;
-    font-size: 8px;
-    color: #fff;
-    font-style: normal;
-    background-color: $primary-color;
-    border-radius: 5px;
-
-    &_cart {
-      top: 5px;
-      right: -16px;
-    }
-
-    &_filter {
-      // top: 0;
-      right: -16px;
-    }
   }
 
   &_wallet {
@@ -132,6 +110,26 @@ div[class$="column"] {
 
   &_card {
     background-image: url(../imgs/payments--card.svg);
+  }
+
+  &__badge {
+    @extend %flexCenterXY;
+
+    position: absolute;
+    width: 16px;
+    height: 10px;
+    padding-top: 1px;
+    font-size: 8px;
+    color: #fff;
+    font-style: normal;
+    background-color: $primary-color;
+    border-radius: 5px;
+
+    &_cart,
+    &_filter {
+      // top: 0;
+      right: -16px;
+    }
   }
 }
 

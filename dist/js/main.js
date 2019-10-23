@@ -43,18 +43,19 @@ function noScroll() {
   window.scroll(0, 0);
 }
 
-/*
-// Плавная прокрутка к секциям
+// Поле для поиска
+const searchBtn = document.querySelector('.search-btn')
+const searchInput = document.querySelector('.search-input')
+const searchForm = document.querySelector('.search-form')
+searchBtn.addEventListener('click', e => {
+  e.preventDefault()
+  const focusedEl = document.activeElement;
 
-headerMenu.addEventListener("click", (e) => {
-  e.preventDefault();
-  if (showMenu) toggleMenu();
-  let targetSection = e.target.getAttribute('href');
-  document.querySelector(targetSection).scrollIntoView({
-    behavior: 'smooth'
-  })
+  searchInput.value !== '' ? searchForm.submit() :
+    searchInput !== focusedEl ? searchInput.focus() :
+    void(0)
+
 })
-*/
 
 $(document).ready(function () {
   // Слайдер на главной
