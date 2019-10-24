@@ -29,10 +29,10 @@
         <div class="nav-column">
           <nav class="top-nav">
             <ul class="top-nav__list list">
-              <li class="top-nav__item">Доставка и оплата</li>
-              <li class="top-nav__item">О компании</li>
-              <li class="top-nav__item">Партнёрам</li>
-              <li class="top-nav__item">Контакты</li>
+              <li class="top-nav__item"><a href="#" class="link">Доставка и оплата</a></li>
+              <li class="top-nav__item"><a href="#" class="link">О компании</a></li>
+              <li class="top-nav__item"><a href="#" class="link">Партнёрам</a></li>
+              <li class="top-nav__item"><a href="#" class="link">Контакты</a></li>
             </ul>
           </nav>
         </div>
@@ -58,29 +58,115 @@
           <span class="slogan">заботимся о лучших ценах</span>
         </div>
 
-        <div class="header__contacts">
-          <a href="tel:8800000000" class="tel header__tel link">
-            <i class="icon icon_tel"></i>
-            8 800 000-00-00
-          </a>
-        </div>
-        <div class="work-time">Ежедневно с 19:00 до 21:00</div>
-        <div class="filters-bar">
-          <i class="icon icon_cart cart">
-            <span class="icon__badge icon__badge_cart">2</span>
-          </i>
-          <i class="icon icon_filter filter">
-            <span class="icon__badge icon__badge_filter">2</span>
-          </i>
-          <i class="icon icon_search"></i>
-        </div>
+        <section class="additional-blocks">
+          <div class="header__contacts">
+            <a href="tel:8800000000" class="tel header__tel link">
+              <i class="icon icon_tel"></i>
+              8 800 000-00-00
+            </a>
+            <div class="work-time">Ежедневно с 19:00 до 21:00</div>
+          </div>
+          <div class="filters-bar">
+            <a href="#" class="link">
+              <i class="icon icon_cart cart">
+                <span class="icon__badge icon__badge_cart">2</span>
+              </i>
+            </a>
+            <a href="#" class="link"><i class="icon icon_filter filter">
+                <span class="icon__badge icon__badge_filter">2</span>
+              </i>
+            </a>
+            <form class="search-form" action="/">
+              <input type="text" class="search-input">
+              <button type="submit" class="search-btn">
+                <i class="icon icon_search"></i>
+              </button>
+            </form>
+
+          </div>
+        </section>
       </section>
 
       <!-- Основное меню -->
       <nav class="nav flex">
+        <div class="menu-btn">
+          <div class="menu-btn__line"></div>
+          <div class="menu-btn__line"></div>
+          <div class="menu-btn__line"></div>
+        </div>
         <ul class="nav__menu list">
-          <li class="nav__item"><a href="#" class="nav__link link bold">Диваны</a></li>
-          <li class="nav__item"><a href="#" class="nav__link link bold">Гостинная</a></li>
+          <li class="nav__item"><a href="#" class="nav__link nav__link_active link bold">Диваны</a></li>
+          <li class="nav__item nav__has-sub-menu">
+            <a href="#" class="nav__link link bold">Гостиная</a>
+            <div class="nav__dropdown">
+              <ul class="nav__sub-menu nav__elected-menu list">
+                <li class="nav__sub-item nav__elected-item">
+                  <a href="#" class="nav__sub-link link">Прямые диваны</a>
+                </li>
+                <li class="nav__sub-item nav__elected-item">
+                  <a href="#" class="nav__sub-link link">Угловые диваны</a>
+                </li>
+                <li class="nav__sub-item nav__elected-item">
+                  <a href="#" class="nav__sub-link link">Модульные диваны</a>
+                </li>
+                <li class="nav__sub-item nav__elected-item">
+                  <a href="#" class="nav__sub-link link">Кушетки</a>
+                </li>
+                <li class="nav__sub-item nav__elected-item">
+                  <a href="#" class="nav__sub-link link">Диваны-кровати</a>
+                </li>
+              </ul>
+              <ul class="nav__sub-menu list">
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Прямые тканевые диваны</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Прямые кожаные диваны</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Угловые тканевые диваны</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Угловые кожаные диваны</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Диваны на металлокаркасе</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Диваны с ортопедическим эффектом</a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Детские диваны</a>
+                </li>
+              </ul>
+              <ul class="nav__sub-menu list">
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Дельфин <span class="nav__category-count">(22)</span></a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Аккардеон <span class="nav__category-count">(22)</span></a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Еврокнижка <span class="nav__category-count">(22)</span></a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Книжка <span class="nav__category-count">(22)</span></a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Выкатаные <span class="nav__category-count">(22)</span></a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Клик-кляк <span class="nav__category-count">(22)</span></a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Седафлекс <span class="nav__category-count">(22)</span></a>
+                </li>
+                <li class="nav__sub-item">
+                  <a href="#" class="nav__sub-link link">Тик-так <span class="nav__category-count">(22)</span></a>
+                </li>
+              </ul>
+            </div>
+          </li>
           <li class="nav__item"><a href="#" class="nav__link link bold">Десткая мебель</a></li>
           <li class="nav__item"><a href="#" class="nav__link link bold">Спальни</a></li>
           <li class="nav__item"><a href="#" class="nav__link link bold">Матрасы</a></li>
@@ -118,147 +204,154 @@
 
     <div class="payments">
       <div class="payments__container container">
-      <header class="payments__header">
-        <img src="./imgs/divan--header.jpg" alt="" class="payments__img">
-        <h1 class="payments__title">Качественный сервис и удобные способы оплаты!</h1>
-      </header>
+        <header class="payments__header">
+          <img src="./imgs/divan--header.jpg" alt="" class="payments__img">
+          <h1 class="payments__title">Качественный сервис и удобные способы оплаты!</h1>
+        </header>
 
-      <article class="payments__content">
-        <h2 class="payments__subtitle">Доставка</h2>
-        <p class="payments__paragraph">Доставка товара осуществляется с 9 до 22 часов.</p>
-        <p class="payments__paragraph">Как только ваш заказ будет готов, с вами свяжется сотрудник службы доставки. С
-          ним вы сможете согласовать удобный для вас день получения мебели.</p>
-        <p class="payments__paragraph">Обратите внимание, что крайне важно накануне согласованной даты быть доступным
-          для звонка. Без подтверждения доставки мы не сможем привезти вам заказ.</p>
-        <p class="payments__paragraph">Если по каким-либо причинам в оговоренное время вы не сможете находиться по
-          адресу доставки и лично подписать акт приемки-передачи, вы можете подготовить доверенность своему
-          представителю.</p>
+        <article class="payments__content">
+          <h2 class="payments__subtitle">Доставка</h2>
+          <p class="payments__paragraph">Доставка товара осуществляется с 9 до 22 часов.</p>
+          <p class="payments__paragraph">Как только ваш заказ будет готов, с вами свяжется сотрудник службы доставки. С
+            ним вы сможете согласовать удобный для вас день получения мебели.</p>
+          <p class="payments__paragraph">Обратите внимание, что крайне важно накануне согласованной даты быть доступным
+            для звонка. Без подтверждения доставки мы не сможем привезти вам заказ.</p>
+          <p class="payments__paragraph">Если по каким-либо причинам в оговоренное время вы не сможете находиться по
+            адресу доставки и лично подписать акт приемки-передачи, вы можете подготовить доверенность своему
+            представителю.</p>
 
-        <h2 class="payments__subtitle">Стоимость доставки и подъема</h2>
+          <h2 class="payments__subtitle">Стоимость доставки и подъема</h2>
 
-        <div class="payments__table">
-          <div class="payments__tr">
-            <div class="payments__th">Вид товара</div>
-            <div class="payments__th">Стоимость</div>
+          <div class="payments__table">
+            <div class="payments__tr">
+              <div class="payments__th">Вид товара</div>
+              <div class="payments__th">Стоимость</div>
+            </div>
+            <div class="payments__tr">
+              <span class="payments__td">Любой товар (кроме малых форм)</span>
+              <span class="payments__td">790 руб.</span>
+            </div>
+            <div class="payments__tr">
+              <span class="payments__td">Малые формы</span>
+              <span class="payments__td">500 руб.</span>
+            </div>
           </div>
-          <div class="payments__tr">
-            <span class="payments__td">Любой товар (кроме малых форм)</span>
-            <span class="payments__td">790 руб.</span>
-          </div>
-          <div class="payments__tr">
-            <span class="payments__td">Малые формы</span>
-            <span class="payments__td">500 руб.</span>
-          </div>
-        </div>
 
-        <h2 class="payments__subtitle">Самовывоз</h2>
-        <p class="payments__paragraph">При желании вы можете самостоятельно забрать приобретенные товары с нашего
-          склада. Для этого, оформляя заказ, сообщите менеджеру, что хотите воспользоваться бесплатной услугой
-          самовывоза. Как только заказ будет готов, наш специалист сообщит вам. Если вы забираете заказ лично, не
-          забудьте взять с собой паспорт. Если забирать товар будет другое лицо, то необходима доверенность.</p>
-        <p class="payments__paragraph">Адрес склада: Московская область, Щёлковский район, д. Никифорово</p>
-        <p class="payments__paragraph"><a href="#" class="payments__link link link_underlined">Посмотреть на карте</a>
-        </p>
+          <h2 class="payments__subtitle">Самовывоз</h2>
+          <p class="payments__paragraph">При желании вы можете самостоятельно забрать приобретенные товары с нашего
+            склада. Для этого, оформляя заказ, сообщите менеджеру, что хотите воспользоваться бесплатной услугой
+            самовывоза. Как только заказ будет готов, наш специалист сообщит вам. Если вы забираете заказ лично, не
+            забудьте взять с собой паспорт. Если забирать товар будет другое лицо, то необходима доверенность.</p>
+          <p class="payments__paragraph">Адрес склада: Московская область, Щёлковский район, д. Никифорово</p>
+          <p class="payments__paragraph"><a href="#" class="payments__link link link_underlined">Посмотреть на карте</a>
+          </p>
 
-        <h2 class="payments__subtitle">Сборка</h2>
-        <p class="payments__paragraph">Мягкая мебель, кровати мягкие и малые формы (столики, тумбы, комоды, вешалки),
-          приобретенные отдельно от комплектов корпусной мебели, собираются в день доставки. Услуга по сборке корпусной
-          мебели (гостиные, прихожие, шкафы-купе) и кроватей Риккарди производится в течение 3-х рабочих дней.</p>
+          <h2 class="payments__subtitle">Сборка</h2>
+          <p class="payments__paragraph">Мягкая мебель, кровати мягкие и малые формы (столики, тумбы, комоды, вешалки),
+            приобретенные отдельно от комплектов корпусной мебели, собираются в день доставки. Услуга по сборке
+            корпусной
+            мебели (гостиные, прихожие, шкафы-купе) и кроватей Риккарди производится в течение 3-х рабочих дней.</p>
 
-        <h2 class="payments__subtitle">Стоимость сборки</h2>
-        <div class="payments__table">
-          <div class="payments__tr">
-            <div class="payments__th">Модель / товар</div>
-            <div class="payments__th">Стоимость</div>
+          <h2 class="payments__subtitle">Стоимость сборки</h2>
+          <div class="payments__table">
+            <div class="payments__tr">
+              <div class="payments__th">Модель / товар</div>
+              <div class="payments__th">Стоимость</div>
+            </div>
+            <div class="payments__tr">
+              <span class="payments__td">Мягкая мебель</span>
+              <span class="payments__td">Бесплатно</span>
+            </div>
+            <div class="payments__tr">
+              <span class="payments__td">Кровать</span>
+              <span class="payments__td">1350 руб.</span>
+            </div>
+            <div class="payments__tr">
+              <span class="payments__td">Ящик для кровати</span>
+              <span class="payments__td">140 руб</span>
+            </div>
+            <div class="payments__tr">
+              <span class="payments__td">Столики, тумбы, комоды, вешалки</span>
+              <span class="payments__td">Бесплатно</span>
+            </div>
+            <div class="payments__tr">
+              <span class="payments__td">Гостиная, прихожая, спальня, шкаф-купе, кровать Риккарди при стоимости мебели
+                (без учета скидки):
+                <br /> до 15 000 руб.
+                <br />от 15 000 руб. до 80 000 руб.
+                <br />от 80 000 руб
+              </span>
+              <span class="payments__td">
+                1250 руб.
+                <br />10% от стоимости товара
+                <br />9% от стоимости товара
+              </span>
+            </div>
           </div>
-          <div class="payments__tr">
-            <span class="payments__td">Мягкая мебель</span>
-            <span class="payments__td">Бесплатно</span>
-          </div>
-          <div class="payments__tr">
-            <span class="payments__td">Кровать</span>
-            <span class="payments__td">1350 руб.</span>
-          </div>
-          <div class="payments__tr">
-            <span class="payments__td">Ящик для кровати</span>
-            <span class="payments__td">140 руб</span>
-          </div>
-          <div class="payments__tr">
-            <span class="payments__td">Столики, тумбы, комоды, вешалки</span>
-            <span class="payments__td">Бесплатно</span>
-          </div>
-          <div class="payments__tr">
-            <span class="payments__td">Гостиная, прихожая, спальня, шкаф-купе, кровать Риккарди при стоимости мебели
-              (без учета скидки):
-              <br /> до 15 000 руб.
-              <br />от 15 000 руб. до 80 000 руб.
-              <br />от 80 000 руб
-            </span>
-            <span class="payments__td">
-              1250 руб.
-              <br />10% от стоимости товара
-              <br />9% от стоимости товара
-            </span>
-          </div>
-        </div>
 
-        <h2 class="payments__subtitle">Сроки</h2>
-        <div class="payments__table">
-          <div class="payments__tr">
-            <div class="payments__th">Модель / товар</div>
-            <div class="payments__th">Срок сборки</div>
+          <h2 class="payments__subtitle">Сроки</h2>
+          <div class="payments__table">
+            <div class="payments__tr">
+              <div class="payments__th">Модель / товар</div>
+              <div class="payments__th">Срок сборки</div>
+            </div>
+            <div class="payments__tr">
+              <span class="payments__td">Столы, тумбы для ТВ, приобретенные отдельно от комплектов мебели</span>
+              <span class="payments__td">В день доставки</span>
+            </div>
+            <div class="payments__tr">
+              <span class="payments__td">Корпусная мебель</span>
+              <span class="payments__td">В течение 3-х рабочих дней</span>
+            </div>
           </div>
-          <div class="payments__tr">
-            <span class="payments__td">Столы, тумбы для ТВ, приобретенные отдельно от комплектов мебели</span>
-            <span class="payments__td">В день доставки</span>
-          </div>
-          <div class="payments__tr">
-            <span class="payments__td">Корпусная мебель</span>
-            <span class="payments__td">В течение 3-х рабочих дней</span>
-          </div>
-        </div>
 
-        <h2 class="payments__subtitle">Оплата</h2>
-        <p class="payments__paragraph">Оплатить товары и услуги в нашем магазине вы можете любым удобным из предложенных
-          способов:</p>
-        <p class="payments__paragraph"><b>Оплата наличными.</b> Наличный расчет возможен по факту получения товара.
-          Экспедитор
-          передаст вам оформленные документы и чеки.</p>
-        <p class="payments__paragraph"><b>Оплата банковской картой онлайн.</b> Для выбора оплаты товара с помощью
-          банковской карты на соответствующей странице необходимо нажать кнопку «Банковская карта». Оплата происходит
-          через ПАО
-          СБЕРБАНК с использованием Банковских карт следующих платежных систем:</p>
-        <ul class="payments__list list list_ordered">
-          <li class="payments__li">МИР <img src="./imgs/payments--mir.png" alt="" class="payments__card-icons"></li>
-          <li class="payments__li">VISA International <img src="./imgs/payments--visa.png" alt=""
-              class="payments__card-icons"></li>
-          <li class="payments__li">Mastercard Worldwide <img src="./imgs/payments--mastercard.png" alt=""
-              class="payments__card-icons"></li>
-        </ul>
+          <h2 class="payments__subtitle">Оплата</h2>
+          <p class="payments__paragraph">Оплатить товары и услуги в нашем магазине вы можете любым удобным из
+            предложенных
+            способов:</p>
+          <p class="payments__paragraph"><b>Оплата наличными.</b> Наличный расчет возможен по факту получения товара.
+            Экспедитор
+            передаст вам оформленные документы и чеки.</p>
+          <p class="payments__paragraph"><b>Оплата банковской картой онлайн.</b> Для выбора оплаты товара с помощью
+            банковской карты на соответствующей странице необходимо нажать кнопку «Банковская карта». Оплата происходит
+            через ПАО
+            СБЕРБАНК с использованием Банковских карт следующих платежных систем:</p>
+          <ul class="payments__list list list_ordered">
+            <li class="payments__li">МИР <img src="./imgs/payments--mir.png" alt="" class="payments__card-icons"></li>
+            <li class="payments__li">VISA International <img src="./imgs/payments--visa.png" alt=""
+                class="payments__card-icons"></li>
+            <li class="payments__li">Mastercard Worldwide <img src="./imgs/payments--mastercard.png" alt=""
+                class="payments__card-icons"></li>
+          </ul>
 
-        <p class="payments__paragraph">Срок возврата товара надлежащего качества составляет 30 дней с момента получения
-          товара.
-          Возврат переведенных средств, производится на Ваш банковский счет в течение 5—30 рабочих дней (срок зависит от
-          Банка, который выдал Вашу банковскую карту).
-          Для оплаты (ввода реквизитов Вашей карты) Вы будете перенаправлены на платежный шлюз ПАО СБЕРБАНК. Соединение
-          с платежным шлюзом и передача информации осуществляется в защищенном режиме с использованием протокола
-          шифрования SSL. В случае если Ваш банк поддерживает технологию безопасного проведения интернет-платежей
-          Verified By Visa, MasterCard SecureCode, MIR Accept, J-Secure для проведения платежа также может потребоваться
-          ввод специального пароля.
-          Настоящий сайт поддерживает 256-битное шифрование. Конфиденциальность сообщаемой персональной информации
-          обеспечивается ПАО СБЕРБАНК. Введенная информация не будет предоставлена третьим лицам за исключением случаев,
-          предусмотренных законодательством РФ. Проведение платежей по банковским картам осуществляется в строгом
-          соответствии с требованиями платежных систем МИР, Visa Int., MasterCard Europe Sprl, JCB</p>
-        <p class="payments__paragraph">
-          <b>Покупка в рассрочку.</b> Рассрочка на 12 месяцев - возможность приобрести заказ в
-          рассрочку онлайн, оформив заявку непосредственно на сайте. После подтверждения заказа, кредитный специалист
-          позвонит и расскажет все условия, проведет анкетирование. Решение от банка-партнера вы получите в течение 15
-          минут. После чего курьер доставит документы в удобное время и по указанному вами адресу. Рассрочка
-          предоставляется только на сумму приобретаемого товара. Доставка и сборка оплачиваются отдельно.</p>
+          <p class="payments__paragraph">Срок возврата товара надлежащего качества составляет 30 дней с момента
+            получения
+            товара.
+            Возврат переведенных средств, производится на Ваш банковский счет в течение 5—30 рабочих дней (срок зависит
+            от
+            Банка, который выдал Вашу банковскую карту).
+            Для оплаты (ввода реквизитов Вашей карты) Вы будете перенаправлены на платежный шлюз ПАО СБЕРБАНК.
+            Соединение
+            с платежным шлюзом и передача информации осуществляется в защищенном режиме с использованием протокола
+            шифрования SSL. В случае если Ваш банк поддерживает технологию безопасного проведения интернет-платежей
+            Verified By Visa, MasterCard SecureCode, MIR Accept, J-Secure для проведения платежа также может
+            потребоваться
+            ввод специального пароля.
+            Настоящий сайт поддерживает 256-битное шифрование. Конфиденциальность сообщаемой персональной информации
+            обеспечивается ПАО СБЕРБАНК. Введенная информация не будет предоставлена третьим лицам за исключением
+            случаев,
+            предусмотренных законодательством РФ. Проведение платежей по банковским картам осуществляется в строгом
+            соответствии с требованиями платежных систем МИР, Visa Int., MasterCard Europe Sprl, JCB</p>
+          <p class="payments__paragraph">
+            <b>Покупка в рассрочку.</b> Рассрочка на 12 месяцев - возможность приобрести заказ в
+            рассрочку онлайн, оформив заявку непосредственно на сайте. После подтверждения заказа, кредитный специалист
+            позвонит и расскажет все условия, проведет анкетирование. Решение от банка-партнера вы получите в течение 15
+            минут. После чего курьер доставит документы в удобное время и по указанному вами адресу. Рассрочка
+            предоставляется только на сумму приобретаемого товара. Доставка и сборка оплачиваются отдельно.</p>
 
-      </article>
+        </article>
+      </div>
     </div>
-  </div>
 
   </main>
   <footer class="footer">
@@ -273,24 +366,24 @@
           <form action="" class="subscription__form">
             <input type="text" class="subscription__input" placeholder="Введите email" required>
             <button class="subscription__btn btn">Подписаться</button>
+            <div class="subscription__privacy-policy">
+              <div class="subscription__checkbox">
+                <input id="privacy-policy" type="checkbox">
+                <label class="subscription__label" for="privacy-policy">Я согласен с <a href="#"
+                    class="subscription__link link">политикой
+                    конфеденциальности</a></label>
+              </div>
+              <div class="subscription__checkbox">
+                <input id="subscribe-agree" type="checkbox">
+                <label class="subscription__label" for="privacy-policy">Я хочу получать рассылки от Твой выбор</label>
+              </div>
+            </div>
           </form>
-          <div class="subscription__privacy-policy">
-            <div class="subscription__checkbox">
-              <input id="privacy-policy" type="checkbox">
-              <label class="subscription__label" for="privacy-policy">Я согласен с <a href="#"
-                  class="subscription__link link">политикой
-                  конфеденциальности</a></label>
-            </div>
-            <div class="subscription__checkbox">
-              <input id="subscribe-agree" type="checkbox">
-              <label class="subscription__label" for="privacy-policy">Я хочу получать рассылки от Твой выбор</label>
-            </div>
-          </div>
         </div>
       </section>
 
       <nav class="footer__nav">
-        <section class="footer__nav-section">
+        <section class="footer__nav-products footer__nav-section footer__nav-menu">
           <h3 class="footer__title">Товары</h3>
           <ul class="products-menu footer-menu list">
             <li class="footer-menu__item">
@@ -317,7 +410,7 @@
           </ul>
         </section>
 
-        <section class="footer__nav-section">
+        <section class="footer__nav-customers footer__nav-section footer__nav-menu">
           <h3 class="footer__title">Покупателю</h3>
           <ul class="customers-menu footer-menu list">
             <li class="footer-menu__item">
@@ -344,7 +437,7 @@
           </ul>
         </section>
 
-        <section class="footer__nav-section">
+        <section class="footer__nav-company footer__nav-section footer__nav-menu">
           <h3 class="footer__title">Твой выбор</h3>
           <ul class="company-menu footer-menu list">
             <li class="footer-menu__item">
@@ -371,7 +464,7 @@
           </ul>
         </section>
 
-        <section class="footer__nav-section">
+        <section class="footer__nav-contacts footer__nav-section">
           <h3 class="footer__title">Контакты</h3>
           <div class="socials">
             <a href="#" class="socials__link socials__vk"></a>
@@ -405,6 +498,8 @@
       </div>
     </section>
   </footer>
+
+  <div class="light-box"></div>
   <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
   <script src="./js/slick.min.js"></script>
   <script src="./js/main.js"></script>

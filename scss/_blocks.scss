@@ -263,7 +263,7 @@ div[class$="column"] {
   &__product {
     // Полужегние по умодчанию: вертикально
     position: relative;
-    width: 100%; // width: 258px;
+    width: 260px; // 100%; // width: 258px;
     height: 318px;
     display: flex;
     flex-direction: column;
@@ -364,8 +364,7 @@ div[class$="column"] {
     @extend %flexCenterXY;
     position: absolute;
     top: -1px;
-    // right: -1px; Перенесено в XL
-    left: -1px;
+    right: -1px;
     height: 35px;
     padding: 5px;
     color: $dark-gray;

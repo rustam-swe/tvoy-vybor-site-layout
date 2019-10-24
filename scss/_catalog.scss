@@ -1,6 +1,11 @@
 .catalog {
   padding-top: 40px;
-  padding-bottom: 50px
+  padding-bottom: 50px;
+  background-color: #fff;
+
+  // &__container{
+
+  // }
 }
 
 .filter-title-bar {
@@ -28,7 +33,8 @@
 
 // Фильтры слева
 .filters {
-  width: 248px;
+  width: 250px;
+  flex-shrink: 0;
 
   &__container {
     margin-top: 30px;
