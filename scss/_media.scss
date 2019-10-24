@@ -100,6 +100,45 @@
       align-self: center
     }
   }
+
+  // Форма рассылки
+
+  .subscription {
+    // flex-direction: column;
+    // padding-top: 20px; // 70px;
+    // padding-bottom: 20px; // 70px;
+
+    
+    &__form {
+      // flex-direction: row;
+      // justify-content: space-between;
+
+      &-column {
+        margin-top: 0;
+      }
+    }
+
+    &__input {
+      width: 250px; // 344px;
+    }
+
+    &__input,
+    &__btn {
+      flex-shrink: 0
+    }
+
+    &__title {
+      margin-bottom: 15px;
+      font-size: 30px;
+    }
+
+    &__subtitle {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+
+  }
 }
 
 // Настольные
@@ -162,49 +201,7 @@
     }
   }
 
-  // Форма рассылки
 
-  .subscription {
-    flex-direction: row;
-    padding-top: 70px;
-    padding-bottom: 70px;
-
-    &__header,
-    &__form-column {
-      flex-basis: 0;
-      flex-grow: 1;
-    }
-
-    &__form {
-      // flex-direction: row;
-      // justify-content: space-between;
-
-      &-column {
-        margin-top: 0;
-      }
-    }
-
-    &__input {
-      width: 300px; // 344px;
-    }
-
-    &__input,
-    &__btn {
-      flex-shrink: 0
-    }
-
-    &__title {
-      margin-bottom: 15px;
-      font-size: 30px;
-    }
-
-    &__subtitle {
-      font-size: 16px;
-      line-height: 20px;
-    }
-
-
-  }
 }
 
 // max-width: 992px
@@ -411,6 +408,45 @@
     &__summary {
       margin-top: 20px;
       margin-left: 0;
+    }
+  }
+
+  .subscription {
+    flex-direction: column;
+
+    &__header,
+    &__form-column {
+      flex: auto;
+    }
+
+    &__title {
+      margin-bottom: 0;
+    }
+
+    &__form {
+      justify-content: flex-start;
+
+      &-column {
+        margin-top: 20px
+      }
+    }
+
+    &__input {
+      width: 300px
+    }
+
+    &__btn {
+      margin-left: 30px;
+    }
+  }
+
+  .footer {
+    &__nav {
+
+      &-products,
+      &-customers {
+        display: none
+      }
     }
   }
 }
@@ -862,11 +898,18 @@
   .subscription {
     flex-direction: column; // SM
 
+    &__title {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
     &__input {
       width: 100%;
     }
 
     &__btn {
+      margin-left: 0;
+      margin-top: 10px;
       order: 3
     }
 
@@ -888,8 +931,18 @@
       }
 
       &-contacts {
-        margin-top: 20px
+        display: grid;
+        margin-top: 20px;
+        grid-gap: 0 30px;
+        grid-template-areas:
+          "title payments"
+          "socials payments"
+          "contacts .";
       }
+    }
+
+    &__payments-methods {
+      justify-content: flex-start;
     }
   }
 }
@@ -986,11 +1039,17 @@
 
 
   .footer {
-    padding-top: 20px;
-
     &__container {
       flex-direction: column;
       justify-content: space-around
+    }
+
+    &__nav-contacts {
+      grid-template-areas:
+        "title"
+        "socials"
+        "contacts"
+        "payments";
     }
   }
 
@@ -1012,10 +1071,6 @@
       }
     }
   }
-
-  // Форма подписки
-
-
 }
 
 

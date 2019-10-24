@@ -1,10 +1,12 @@
 // Футер
 .footer {
+  padding-top: 20px;
   background-color: #F2F2F2;
 
   &__nav {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
     padding-bottom: 20px;
 
     &-section {
@@ -19,6 +21,8 @@
     font-weight: bold;
     font-size: 24px;
     line-height: 29px;
+
+    grid-area: title
   }
 
   &-menu__link {
@@ -30,6 +34,8 @@
   &__contacts {
     margin-top: 15px;
     margin-bottom: 15px;
+
+    grid-area: contacts
   }
 
   &__info-bar {
@@ -49,6 +55,8 @@
       justify-content: space-between;
       align-items: center;
       margin-top: 15px;
+
+      grid-area: payments
     }
 
     &-img:not(:first-child) {
@@ -60,6 +68,8 @@
 
 .socials {
   display: flex;
+
+  grid-area: socials;
 
   &__link {
     @extend %flexCenterXY;
