@@ -640,6 +640,12 @@ div[class$="column"] {
     color: $secondary-color;
   }
 
+  &__header,
+  &__form-column {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+
   &__title {
     margin: 0;
     font-size: 20px;

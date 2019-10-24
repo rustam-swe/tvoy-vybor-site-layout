@@ -898,6 +898,9 @@ div[class$="column"] {
   align-items: flex-start; }
   .subscription__header {
     color: #676767; }
+  .subscription__header, .subscription__form-column {
+    flex-basis: 0;
+    flex-grow: 1; }
   .subscription__title {
     margin: 0;
     font-size: 20px;
@@ -1774,10 +1777,12 @@ div[class$="column"] {
     padding-left: 50px; }
 
 .footer {
+  padding-top: 20px;
   background-color: #F2F2F2; }
   .footer__nav {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
     padding-bottom: 20px; }
     .footer__nav-section {
       width: 250px; }
@@ -1787,14 +1792,16 @@ div[class$="column"] {
     font-family: OpenSans-Regular;
     font-weight: bold;
     font-size: 24px;
-    line-height: 29px; }
+    line-height: 29px;
+    grid-area: title; }
   .footer-menu__link {
     color: #333;
     font-size: 14px;
     line-height: 30px; }
   .footer__contacts {
     margin-top: 15px;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    grid-area: contacts; }
   .footer__info-bar {
     background-color: #fff; }
   .footer__container {
@@ -1806,12 +1813,14 @@ div[class$="column"] {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 15px; }
+    margin-top: 15px;
+    grid-area: payments; }
   .footer__payments-img:not(:first-child) {
     margin-left: 10px; }
 
 .socials {
-  display: flex; }
+  display: flex;
+  grid-area: socials; }
   .socials__link {
     width: 35px;
     height: 35px;
@@ -1873,7 +1882,19 @@ div[class$="column"] {
   .testimonials__article-header {
     flex-direction: column; }
   .testimonials__thumb {
-    align-self: center; } }
+    align-self: center; }
+  .subscription__form-column {
+    margin-top: 0; }
+  .subscription__input {
+    width: 250px; }
+  .subscription__input, .subscription__btn {
+    flex-shrink: 0; }
+  .subscription__title {
+    margin-bottom: 15px;
+    font-size: 30px; }
+  .subscription__subtitle {
+    font-size: 16px;
+    line-height: 20px; } }
 
 @media screen and (min-width: 992px) {
   .products__grid {
@@ -1900,26 +1921,7 @@ div[class$="column"] {
   .testimonials__article {
     max-width: 340px; }
     .testimonials__article:not(:first-child) {
-      margin-left: 40px; }
-  .subscription {
-    flex-direction: row;
-    padding-top: 70px;
-    padding-bottom: 70px; }
-    .subscription__header, .subscription__form-column {
-      flex-basis: 0;
-      flex-grow: 1; }
-    .subscription__form-column {
-      margin-top: 0; }
-    .subscription__input {
-      width: 300px; }
-    .subscription__input, .subscription__btn {
-      flex-shrink: 0; }
-    .subscription__title {
-      margin-bottom: 15px;
-      font-size: 30px; }
-    .subscription__subtitle {
-      font-size: 16px;
-      line-height: 20px; } }
+      margin-left: 40px; } }
 
 @media screen and (max-width: 992px) {
   .header__top-bar {
@@ -2020,7 +2022,23 @@ div[class$="column"] {
         margin-top: 20px; }
     .cart__summary {
       margin-top: 20px;
-      margin-left: 0; } }
+      margin-left: 0; }
+  .subscription {
+    flex-direction: column; }
+    .subscription__header, .subscription__form-column {
+      flex: auto; }
+    .subscription__title {
+      margin-bottom: 0; }
+    .subscription__form {
+      justify-content: flex-start; }
+      .subscription__form-column {
+        margin-top: 20px; }
+    .subscription__input {
+      width: 300px; }
+    .subscription__btn {
+      margin-left: 30px; }
+  .footer__nav-products, .footer__nav-customers {
+    display: none; } }
 
 @media screen and (min-width: 768px) {
   .products__grid {
@@ -2224,9 +2242,14 @@ div[class$="column"] {
     justify-self: center; }
   .subscription {
     flex-direction: column; }
+    .subscription__title {
+      font-size: 20px;
+      line-height: 1.6; }
     .subscription__input {
       width: 100%; }
     .subscription__btn {
+      margin-left: 0;
+      margin-top: 10px;
       order: 3; }
     .subscription__privacy-policy {
       order: 2; }
@@ -2235,7 +2258,12 @@ div[class$="column"] {
   .footer__nav-menu {
     display: none; }
   .footer__nav-contacts {
-    margin-top: 20px; } }
+    display: grid;
+    margin-top: 20px;
+    grid-gap: 0 30px;
+    grid-template-areas: "title payments" "socials payments" "contacts ."; }
+  .footer__payments-methods {
+    justify-content: flex-start; } }
 
 @media screen and (max-width: 480px) {
   .header__info {
@@ -2274,11 +2302,11 @@ div[class$="column"] {
   .pcard__brief-characteristics {
     grid-template-columns: 1fr;
     grid-template-areas: "size" "style" "interior" "mechanism" "colors" "btns" "delivery"; }
-  .footer {
-    padding-top: 20px; }
-    .footer__container {
-      flex-direction: column;
-      justify-content: space-around; }
+  .footer__container {
+    flex-direction: column;
+    justify-content: space-around; }
+  .footer__nav-contacts {
+    grid-template-areas: "title" "socials" "contacts" "payments"; }
   .subscription__btn {
     margin-top: 10px; }
   .subscription__privacy-policy {
