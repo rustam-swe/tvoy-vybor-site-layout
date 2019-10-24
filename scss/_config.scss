@@ -90,6 +90,12 @@ $round: 50px;
   }
 }
 
+@mixin media-Max-600 {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}
+
 @mixin media-MinMax-600-767 {
   @media screen and (min-width: 600px) and (max-width:767px) {
     @content;

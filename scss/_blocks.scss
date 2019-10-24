@@ -376,6 +376,7 @@ div[class$="column"] {
   &__btn-buy {
     @extend %flexCenterXY;
 
+    width: 150px;
     margin-top: 15px;
     margin-bottom: 25px;
     padding: 6px 20px;
@@ -397,6 +398,7 @@ div[class$="column"] {
 // Отзывы о товарах
 
 .testimonials {
+  padding-top: 30px;
   padding-bottom: 60px;
 
   &__article {

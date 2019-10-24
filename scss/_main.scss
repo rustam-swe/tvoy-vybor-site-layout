@@ -104,15 +104,19 @@ $banners-height: 445px;
   &__products {
     margin-bottom: 25px;
     grid-template-columns: 2fr 1fr;
-    grid-gap: 25px;
     grid-template-areas:
-      // "big-prod vertical-prod-1"
-      // "big-prod vertical-prod-2";
-      "big-prod"
-      "vertical-prod-1"
-      "vertical-prod-2";
+      "big-prod vertical-prod-1"
+      "big-prod vertical-prod-2";
 
     .products__product {
+      height: 160px;
+
+      &_large {
+        width: 717px; // 737px;
+        height: 345px;
+        padding: 0;
+      }
+
       &:first-child {
         grid-area: big-prod;
       }
@@ -196,8 +200,21 @@ $banners-height: 445px;
   }
 
   &__container {
-    display: flex;
+    // display: flex;
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
   }
+&__thumb{
+  align-self: center
+}
+  &__img{
+    width: 100%;
+  }
+  // &__info,
+  // &__thumb,
+  // &__cta-column {
+  //   flex-shrink: 0
+  // }
 
   &__info {
     display: flex;
