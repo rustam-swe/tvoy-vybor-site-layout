@@ -32,6 +32,13 @@
   //     }
   //   }
   // }
+
+  .subscription{
+    &__input{
+      flex-grow: 1;
+    margin-right: 20px
+    }
+  }
 }
 
 // max-width: 1199px
@@ -40,7 +47,17 @@
     display: none
   }
 
+  .banner__slider {
+    .slick {
+      &-prev {
+        left: 0;
+      }
 
+      &-next {
+        right: 0
+      }
+    }
+  }
 
   .products {
 
@@ -54,19 +71,25 @@
       &_sales-hits {
         grid-template-columns: repeat(3, 1fr)
       }
-
-      &.recommended__products {
-        grid-gap: 27px;
-
-        .products__product {
-          &_large {
-            width: 100%;
-            height: auto;
-          }
-        }
-      }
     }
 
+    &__product {
+      &_large {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &.recommended__products {
+    grid-gap: 27px;
+
+    // .products__product {
+    //   &_large {
+    //     width: 100%;
+    //     height: auto;
+    //   }
+    // }
   }
 
   .payments {
@@ -148,7 +171,12 @@
     }
 
     &__input {
-      width: 250px; // 344px;
+      width: 60%; // 250px; // 344px;
+    }
+
+    &__btn {
+      width: 37%;
+      font-size: 22px;
     }
 
     &__input,
@@ -358,6 +386,12 @@
     }
   }
 
+  .banner {
+    &__thumb {
+      width: 45%
+    }
+  }
+
   // Блок с загаловком 
   .title-bar {
     &__title {
@@ -386,6 +420,27 @@
     &__product {
       width: 100%;
       max-width: 350px;
+
+      &_horizontal {
+        height: auto;
+        flex-direction: column;
+      }
+
+      &_large {
+        max-width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        flex-direction: row;
+      }
+    }
+
+    &__name_large,
+    &__price_large {
+      margin-top: 10px;
+    }
+
+    &__btn-buy {
+      margin-bottom: 10px;
     }
   }
 
@@ -395,30 +450,10 @@
       "big-prod big-prod"
       "vertical-prod-1 vertical-prod-2";
 
-    .products {
-      &__product {
-
-        &_horizontal {
-          height: auto;
-          flex-direction: column;
-        }
-
-        &_large {
-          max-width: 100%;
-          padding-top: 10px;
-          padding-bottom: 10px;
-          flex-direction: row;
-        }
-
-      }
-
-      &__name_large,
-      &__price_large {
-        margin-top: 10px;
-      }
-
-      &__btn-buy {
-        margin-bottom: 10px;
+    .products__product_large {
+      .products__info {
+        padding-top: 0;
+        padding-bottom: 0;
       }
     }
   }
@@ -466,6 +501,11 @@
     }
   }
 
+  .features{
+    &__sub-item{
+      width: 100%;
+    }
+  }
 
   // Карточка товара
   .pcard {
@@ -670,6 +710,28 @@
     display: none
   }
 
+  .banner {
+
+    &__bg-decor {
+      width: 200px;
+      height: 200px;
+      right: 0;
+      background-size: contain;
+    }
+
+    &__title {
+      font-size: 35px;
+    }
+
+    &__text {
+      margin-top: 0;
+    }
+
+    &__btn {
+      margin-top: 20px
+    }
+  }
+
   // Блок с загаловком 
   .title-bar {
     &__container {
@@ -732,6 +794,35 @@
     //   font-size: initial;
     // }
 
+    &__product,
+    &__product_large {
+      width: 100%;
+      max-width: 350px;
+      flex-direction: column;
+      padding: 15px 25px;
+      // height: 180px;
+      // padding-left: 0;
+      // padding-right: 0;
+      // font-weight: normal;
+      // flex-direction: row;
+    }
+
+    &__thumb_large {
+      margin-right: 0;
+    }
+
+    &__info {
+      margin-top: 20px;
+    }
+
+    &__name_large,
+    &__model_large,
+    &__price_large {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
     &__price {
       font-size: 20px;
 
@@ -742,33 +833,27 @@
       &_original {
         margin-left: 15px
       }
-    }
 
-    &__product {
-      width: 100%;
-      max-width: 350px;
-      // height: 180px;
-      // padding-left: 0;
-      // padding-right: 0;
-      // font-weight: normal;
-      // flex-direction: row;
+      &_modifier-large {
+        top: -5px;
+        font-size: 12px;
+      }
     }
 
     &__discount-percentage {
       left: -1px;
       right: auto
     }
+
+    &__btn-buy {
+      display: none
+    }
   }
 
   .recommended {
-
-    &__tabs-item {
-      font-size: initial
-    }
-
-    & [class$="_large"] {
-      font-size: initial;
-    }
+    // & [class$="_large"] {
+    //   font-size: initial;
+    // }
 
     &__products {
       // grid-template-columns: repeat(2, 1fr);
@@ -1112,6 +1197,48 @@
 
 
 // Мобильные телефоны
+@include media-Max-600 {
+  .banner {
+    &__slide {
+      flex-direction: column;
+    }
+
+    &__thumb,
+    &__info {
+      width: 80%;
+    }
+
+    &__img {
+      top: 0
+    }
+
+    &__bg-decor {
+      display: none;
+    }
+
+    &__text {
+      max-width: initial;
+    }
+  }
+
+  .offer {
+    &__container {
+      grid-template-columns: 1fr;
+    }
+
+    &__info {
+      grid-row: 2 / 3
+    }
+
+    &__cta-column {
+      grid-area: 3 / 1 / 4 / 2
+    }
+
+    &__price {
+      text-align: left;
+    }
+  }
+}
 
 // max-width: 480px
 @include mediaXs {
@@ -1132,6 +1259,26 @@
     width: 100%;
   }
 
+  .banner {
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &__slide,
+    &__slider {
+      height: auto;
+    }
+
+    &__thumb {
+      width: 60%;
+    }
+
+    &__title {
+      font-size: 25px;
+      line-height: initial;
+    }
+  }
+
   .products {
 
     &__product {
@@ -1140,13 +1287,27 @@
     }
   }
 
-  .offer{
-    &__countdown {
-    display: none
+  .recommended {
+
+    &__tabs {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .tabs__tab {
+      font-size: initial
+    }
   }
-&__cta-column{
-  justify-content: center
-}}
+
+  .offer {
+    &__countdown {
+      display: none
+    }
+
+    &__cta-column {
+      justify-content: center
+    }
+  }
 
   .map {
     position: static;
@@ -1244,25 +1405,7 @@
   }
 }
 
-@include media-Max-600 {
-  .offer {
-    &__container {
-      grid-template-columns: 1fr;
-    }
 
-    &__info {
-      grid-row: 2 / 3
-    }
-
-    &__cta-column {
-      grid-area: 3 / 1 / 4 / 2
-    }
-
-    &__price {
-      text-align: left;
-    }
-  }
-}
 
 @include media-MinMax-600-767 {
 

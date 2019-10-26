@@ -229,10 +229,18 @@
                   </li>
                   <li class="full-chars__basic-item">
                     <div class="full-chars__key">Количество</div>
-                    <div class="full-chars__value"><input type="text"></div>
+                    <div class="full-chars__value full-chars__quantity-wrapper">
+                      <button class="full-chars__decrementer">-</button>
+                      <input type="text" class="full-chars__quantity" value="1">
+                      <button class="full-chars__incrementer">+</button>
+                    </div>
                   </li>
                 </ul>
-                <div class="cart-product__price">59 990 &#8381;</div>
+                <div class="cart-product__price">59 990 &#8381;
+                  <a href="#" class="cart-product__delete link">
+                    <i class="icon icon_delete"></i>
+                  </a>
+                </div>
               </section>
 
             </article>
@@ -241,6 +249,7 @@
                 <label>
                   <input type="checkbox">
                   С доставкой
+
                 </label>
                 <div class="with-delivery-price">560 &#8381;</div>
               </div>

@@ -7,11 +7,12 @@ $banners-height: 445px;
   height: $banners-height;
   border-radius: 15px;
   box-shadow: $shadow;
-  background: url(../imgs/banner-bg.png) no-repeat center;
+  // background: url(../imgs/banner-bg.png) no-repeat center;
 
   &__slider,
   &__slide {
     display: flex !important;
+    justify-content: center;
     align-items: center;
     height: $banners-height;
   }
@@ -84,8 +85,14 @@ $banners-height: 445px;
     justify-content: space-between;
     margin-top: 50px;
     margin-bottom: 50px;
+  }
 
-    &-item {
+  .tabs {
+    &__content_active {
+      display: block;
+    }
+
+    &__tab {
       @extend %flexCenterXY;
       height: 41px;
       font-size: 24px;
@@ -101,6 +108,7 @@ $banners-height: 445px;
     }
   }
 
+
   &__products {
     margin-bottom: 25px;
     grid-template-columns: 2fr 1fr;
@@ -108,25 +116,30 @@ $banners-height: 445px;
       "big-prod vertical-prod-1"
       "big-prod vertical-prod-2";
 
-    .products__product {
-      height: 160px;
+    .products {
 
-      &_large {
-        width: 717px; // 737px;
-        height: 345px;
-        padding: 0;
-      }
 
-      &:first-child {
-        grid-area: big-prod;
-      }
+      &__product {
 
-      &:nth-child(2) {
-        grid-area: vertical-prod-1
-      }
+        // height: 160px;
+        &_large {
+          .products__info {
+            padding-top: 40px;
+            padding-bottom: 10px;
+          }
+        }
 
-      &:nth-child(3) {
-        grid-area: vertical-prod-2
+        &:first-child {
+          grid-area: big-prod;
+        }
+
+        &:nth-child(2) {
+          grid-area: vertical-prod-1
+        }
+
+        &:nth-child(3) {
+          grid-area: vertical-prod-2
+        }
       }
     }
 
@@ -179,7 +192,7 @@ $banners-height: 445px;
   height: 380px;
   padding-top: 40px;
   padding-bottom: 40px;
-  background: url(../imgs/offer-bg.jpg) no-repeat;
+  // background: url(../imgs/offer-bg.jpg) no-repeat;
 
   &__header {
     @extend %flexCenterXY;
@@ -204,12 +217,15 @@ $banners-height: 445px;
     display: grid;
     grid-template-columns: 40% 40% 20%;
   }
-&__thumb{
-  align-self: center
-}
-  &__img{
+
+  &__thumb {
+    align-self: center
+  }
+
+  &__img {
     width: 100%;
   }
+
   // &__info,
   // &__thumb,
   // &__cta-column {
@@ -459,6 +475,7 @@ $banners-height: 445px;
     font-weight: 600;
     font-size: 13px;
     line-height: 16px;
+    text-align: center;
   }
 
   &__item {
@@ -483,6 +500,9 @@ $banners-height: 445px;
   }
 
   &__sub-item {
+    // width: 100%;
+    padding: 0;
+
     &_first {
       align-self: flex-end;
     }

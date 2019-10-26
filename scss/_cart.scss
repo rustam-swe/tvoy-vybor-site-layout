@@ -52,6 +52,10 @@
       font-size: 24px;
       line-height: 33px;
     }
+
+    &__delete {
+      padding: 0 10px;
+    }
   }
 
   &__summary {
@@ -135,5 +139,34 @@
   &-price {
     font-size: 24px;
     line-height: 33px;
+  }
+}
+
+.full-chars {
+  &__wrapper {
+    display: flex;
+  }
+
+  &__quantity {
+    width: 40px;
+    height: 25px;
+    color: $dark-gray;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: normal;
+    text-align: center;
+    border: 0.5px solid #8F8F8F;
+  }
+
+  &__decrementer,
+  &__incrementer {
+    width: 25px;
+    height: 25px;
+    color: $secondary-font;
+    font-size: 18px;
+    font-family: $secondary-font;
+    border: transparent;
+    background-color: transparent;
+    cursor: pointer;
   }
 }

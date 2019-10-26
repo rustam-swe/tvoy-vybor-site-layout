@@ -57,6 +57,72 @@ searchBtn.addEventListener('click', e => {
 
 })
 
+// Попперы
+const popperContainer = document.querySelector('.popper')
+const refEl = document.querySelector('.popper__circle');
+const popEl = document.querySelector('.popper__info');
+
+/*popperContainer.addEventListener('click', (e) => {
+  new Popper(refEl, popEl, {
+    placement: 'auto-start'
+  });
+  console.log(e, refEl, popEl)
+  if (e.target != refEl || e.target != popEl) {
+    popEl.classList.remove('popper__info_show');
+  } else {
+    popEl.classList.add('popper__info_show');
+  }
+})
+
+
+// Restricts input for the given textbox to the given inputFilter.
+function setInputFilter(textbox, inputFilter) {
+  ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function (event) {
+    textbox.oldValue = "";
+    textbox.addEventListener(event, function () {
+      if (inputFilter(this.value)) {
+        this.oldValue = this.value;
+        this.oldSelectionStart = this.selectionStart;
+        this.oldSelectionEnd = this.selectionEnd;
+      } else if (this.hasOwnProperty("oldValue")) {
+        this.value = this.oldValue;
+        this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+      }
+    });
+  });
+}
+const input = document.querySelector('.full-chars__quantity');
+// Restrict input to digits and '.' by using a regular expression filter.
+setInputFilter(input, function (value) {
+  return /^\d*\.?\d*$/.test(value);
+});
+
+const decrementBtn = document.querySelector('.full-chars__decrementer');
+const incrementBtn = document.querySelector('.full-chars__incrementer');
+
+
+function increment() {
+  document.querySelector('.full-chars__quantity').value++
+}
+
+function decrement() {
+  document.querySelector('.full-chars__quantity').value++
+}
+
+decrementBtn.addEventListener('click', decrement);
+incrementBtn.addEventListener('click', increment);
+
+// Аккардеон в каталоге
+
+const filtersList = document.querySelector('.filters__list'); // Аккардеон
+
+filtersList.addEventListener('click', e => {
+  e.preventDefault();
+  e.target.children[0].classList.toggle('filters__caret_collapse'); // стрелка
+  e.target.nextElementSibling.classList.toggle('filters__details_opened'); // контент
+});
+
+*/
 $(document).ready(function () {
   // Слайдер на главной
   $('.banner__slider').slick({
@@ -92,25 +158,6 @@ $(document).ready(function () {
     }]
   });
 
-  // Табы
-
-  /* 
-    $('.tabs__container > section').hide();
-      $('.tabs__container > section:first-of-type').show();
-      $('.tabs__btns a').click(function (e) {
-        e.preventDefault();
-        var $this = $(this),
-          tabgroup = '#' + $this.parents('.tabs__btns').data('tabgroup'),
-          others = $this.closest('li').siblings().children('a'),
-          target = $this.attr('href');
-        others.removeClass('active');
-        $this.addClass('active');
-        $(tabgroup).children('div').hide();
-        $(target).show();
-
-      })
-    */
-
   // Табы на странице новости
   const tabLinks = document.querySelectorAll('.tabs__tab'); // Вкладки
   const tabContent = document.querySelectorAll('.tabs__content'); // Содержимое
@@ -134,15 +181,5 @@ $(document).ready(function () {
     let activeTab = e.target.getAttribute('href').slice(1);
     document.getElementById(activeTab).classList.add('tabs__content_active')
   }
+
 });
-
-
-// Аккардеон в каталоге
-
-const filtersList = document.querySelector('.filters__list'); // Аккардеон
-
-filtersList.addEventListener('click', e => {
-  e.preventDefault();
-  e.target.children[0].classList.toggle('filters__caret_collapse'); // стрелка
-  e.target.nextElementSibling.classList.toggle('filters__details_opened'); // контент
-})
