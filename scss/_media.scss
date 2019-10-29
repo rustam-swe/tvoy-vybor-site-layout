@@ -33,10 +33,10 @@
   //   }
   // }
 
-  .subscription{
-    &__input{
+  .subscription {
+    &__input {
       flex-grow: 1;
-    margin-right: 20px
+      margin-right: 20px
     }
   }
 }
@@ -501,9 +501,19 @@
     }
   }
 
-  .features{
-    &__sub-item{
+  .features {
+    &__sub-item {
       width: 100%;
+    }
+  }
+
+  .featured-block {
+    &__container {
+      padding-left: 0;
+    }
+
+    &__interactive {
+      display: none
     }
   }
 
@@ -1404,8 +1414,6 @@
     }
   }
 }
-
-
 
 @include media-MinMax-600-767 {
 

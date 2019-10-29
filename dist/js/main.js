@@ -57,24 +57,64 @@ searchBtn.addEventListener('click', e => {
 
 })
 
-// Попперы
-const popperContainer = document.querySelector('.popper')
-const refEl = document.querySelector('.popper__circle');
-const popEl = document.querySelector('.popper__info');
+// Попперы (на странице "О нас")
+const popperContainer = document.querySelector('.featured-block'); // Контейнер для поппера
+const popperCircleAll = document.querySelectorAll('.popper__circle');
+const popperInfoAll = document.querySelectorAll('.popper__info');
 
-/*popperContainer.addEventListener('click', (e) => {
-  new Popper(refEl, popEl, {
-    placement: 'auto-start'
-  });
-  console.log(e, refEl, popEl)
-  if (e.target != refEl || e.target != popEl) {
-    popEl.classList.remove('popper__info_show');
+popperContainer.addEventListener('click', createPopper)
+
+function removeClassFromElements(array, className) {
+  // Удаляет класс у всех элементов массива
+  // Аргументы: массив, название класса
+  array.forEach(element => {
+    element.classList.remove(className);
+  })
+}
+
+function createPopper(e) {
+  const clickedEl = e.target; // Кружочек с номером
+  const popperInfo = clickedEl.nextElementSibling; // Соседний блок с инфо.
+
+  if (!clickedEl.classList.contains('popper__circle_active') && popperInfo != null) {
+    open(clickedEl, popperInfo)
   } else {
-    popEl.classList.add('popper__info_show');
+    close();
   }
-})
+}
+
+function open(referenceElement, popperElement) {
+  close(); // Закрывает все (остальные) открытые окна
+
+  referenceElement.classList.add('popper__circle_active');
+  popperElement.classList.add('popper__info_show');
+
+  // Создание инфо блока
+  new Popper(referenceElement, popperElement, {
+    placement: 'bottom-start',
+    modifiers: {
+      preventOverflow: {
+        boundariesElement: popperContainer
+      },
+      flip: {
+        behavior: ['left', 'right', 'bottom', 'top']
+      },
+      offset: {
+        enabled: true,
+        offset: '33'
+      }
+    }
+  });
+}
+
+function close() {
+  removeClassFromElements(popperInfoAll, 'popper__info_show')
+  removeClassFromElements(popperCircleAll, 'popper__circle_active')
+}
 
 
+
+/*
 // Restricts input for the given textbox to the given inputFilter.
 function setInputFilter(textbox, inputFilter) {
   ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function (event) {
