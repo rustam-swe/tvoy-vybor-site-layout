@@ -197,7 +197,7 @@
         </section>
 
         <!-- Загаловок страницы -->
-        <h1 class="page-title section-title">Контакты</h1>
+        <h1 class="page-title section__title section__title_uppercase">Контакты</h1>
       </div>
     </header>
     <section class="map">
@@ -237,10 +237,10 @@
           </label>
           <textarea name="content" class="contact-form__text" cols="30" rows="10"
             placeholder="Задайте вопрос здесь"></textarea>
-          <label class="contact-form__checkbox" for="checkbox">
-            <input type="checkbox" name="checkbox">
-            Даю согласие на получение информации о моей заявке
-          </label>
+          <div class="contact-form__checkbox form-group">
+              <input id="agreement" class="checkbox-custom" type="checkbox">
+              <label class="checkbox-custom__label" for="agreement">Даю согласие на получение информации о моей заявке</label>
+            </div>
           <button type="submit" class="contact-form__btn btn">Отправить</button>
           <div class="contact-form__disclaimer">Нажимая кнопку "Отправить", вы соглашаетесь с <a href="#"
               class="contact-form__link link link_underlined">Политикой конфиденциальности</a>
@@ -267,15 +267,17 @@
             <input type="text" class="subscription__input" placeholder="Введите email" required>
             <button class="subscription__btn btn">Подписаться</button>
             <div class="subscription__privacy-policy">
-              <div class="subscription__checkbox">
-                <input id="privacy-policy" type="checkbox">
-                <label class="subscription__label" for="privacy-policy">Я согласен с <a href="#"
-                    class="subscription__link link">политикой
-                    конфеденциальности</a></label>
+              <div class="subscription__checkbox form-group">
+                <input id="privacy-policy" class="checkbox-custom" type="checkbox">
+                <label class="subscription__label checkbox-custom__label" for="privacy-policy"><span>
+                    Я согласен с &nbsp;<a href="#" class="subscription__link link">политикой
+                      конфеденциальности</a>
+                  </span></label>
               </div>
-              <div class="subscription__checkbox">
-                <input id="subscribe-agree" type="checkbox">
-                <label class="subscription__label" for="privacy-policy">Я хочу получать рассылки от Твой выбор</label>
+              <div class="subscription__checkbox form-group">
+                <input id="subscribe-agree" class="checkbox-custom" type="checkbox">
+                <label class="subscription__label checkbox-custom__label" for="subscribe-agree">Я хочу получать рассылки
+                  от Твой выбор</label>
               </div>
             </div>
           </form>

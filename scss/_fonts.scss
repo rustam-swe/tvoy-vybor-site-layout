@@ -16,7 +16,18 @@
     font-style: normal;
 }
 
-// Используется в таймере на главной странице
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../fonts/Montserrat-SemiBold.eot');
+    src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
+        url('../fonts/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-SemiBold.woff') format('woff'),
+        url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 @font-face {
     font-family: 'OpenSans-Regular';
     src: url('../fonts/OpenSans-Regular.woff') format('woff'),

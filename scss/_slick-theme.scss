@@ -80,48 +80,17 @@ $slick-opacity-not-active: 0.25 !default;
     padding: 0;
     border: none;
     outline: none;
-
-    &:hover .slick-next::before,
-    &:focus .slick-prev::before {
-        display: block;
-    }
-
-
-    &:before {
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: inherit;
-        height: inherit;
-    }
-}
-
-.slick-prev:hover .slick-prev::before,
-.slick-next:hover .slick-next::before {
-    display: block;
 }
 
 .slick-prev {
     left: 80px; // -25px; // 30px;
     background: url(../imgs/arrow--left.svg) no-repeat center 7px;
-
-    &:before {
-
-        content: '';
-        background: url(../imgs/arrow--border.svg) no-repeat
-    }
+    z-index: 3;
 }
 
 .slick-next {
     right: 80px; // -25px;
     background: url(../imgs/arrow--right.svg) no-repeat center 7px;
-
-    &:before {
-
-        content: '';
-        background: url(../imgs/arrow--border.svg) no-repeat
-    }
 }
 
 /* Dots */

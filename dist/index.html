@@ -222,7 +222,7 @@
     <section class="recommended section">
       <div class="container">
         <header class="section__header">
-          <h1 class="section__title">Лучшие предложения</h1>
+          <h1 class="section__title section__title_centered">Лучшие предложения</h1>
         </header>
         <ul class="list recommended__tabs">
           <li>
@@ -609,7 +609,7 @@
             </div>
           </div>
           <div class="offer__cta-text">Уже купили 302 человека, количество товара ограничено</div>
-          <button class="offer__cta-btn btn">Купить</button>
+          <a href="#" class="offer__cta-btn btn link">Купить</a>
         </div>
       </div>
     </section>
@@ -649,7 +649,7 @@
     <section class="sales-hits">
       <div class="container">
         <header class="section__header">
-          <h1 class="section__title">Хиты продаж</h1>
+          <h1 class="section__title section__title_centered">Хиты продаж</h1>
         </header>
         <div class="products__grid products__grid_sales-hits">
           <article class="products__product">
@@ -720,7 +720,7 @@
     <section class="testimonials">
       <div class="container">
         <header class="section__header">
-          <h1 class="section__title">Отзывы о товарах</h1>
+          <h1 class="section__title section__title_centered">Отзывы о товарах</h1>
         </header>
         <div class="testimonials__list">
           <article class="testimonials__article">
@@ -819,15 +819,17 @@
             <input type="text" class="subscription__input" placeholder="Введите email" required>
             <button class="subscription__btn btn">Подписаться</button>
             <div class="subscription__privacy-policy">
-              <div class="subscription__checkbox">
-                <input id="privacy-policy" type="checkbox">
-                <label class="subscription__label" for="privacy-policy">Я согласен с <a href="#"
-                    class="subscription__link link">политикой
-                    конфеденциальности</a></label>
+              <div class="subscription__checkbox form-group">
+                <input id="privacy-policy" class="checkbox-custom" type="checkbox">
+                <label class="subscription__label checkbox-custom__label" for="privacy-policy"><span>
+                    Я согласен с &nbsp;<a href="#" class="subscription__link link">политикой
+                      конфеденциальности</a>
+                  </span></label>
               </div>
-              <div class="subscription__checkbox">
-                <input id="subscribe-agree" type="checkbox">
-                <label class="subscription__label" for="privacy-policy">Я хочу получать рассылки от Твой выбор</label>
+              <div class="subscription__checkbox form-group">
+                <input id="subscribe-agree" class="checkbox-custom" type="checkbox">
+                <label class="subscription__label checkbox-custom__label" for="subscribe-agree">Я хочу получать рассылки
+                  от Твой выбор</label>
               </div>
             </div>
           </form>

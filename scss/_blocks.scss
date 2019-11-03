@@ -100,6 +100,12 @@ div[class$="column"] {
     // margin-right: 40px;
   }
 
+  &_catalog-filter {
+    width: 16px;
+    height: 10px;
+    background-image: url(../imgs/icon--catalog-filter.svg);
+  }
+
   &_search {
     background-image: url(../imgs/search.svg);
   }
@@ -112,10 +118,20 @@ div[class$="column"] {
     background-image: url(../imgs/payments--card.svg);
   }
 
+  &_caret-down {
+    background-image: url(../imgs/caret--down-full.svg);
+  }
+
   &_delete {
     width: 13px;
     height: 13px;
     background-image: url(../imgs/icon--delete.svg);
+  }
+
+  &_info {
+    width: 11px;
+    height: 11px;
+    background-image: url(../imgs/icon--info.svg);
   }
 
   &__badge {
@@ -163,16 +179,24 @@ div[class$="column"] {
   padding-bottom: 15px;
 
   &__title {
-    font-family: Montserrat;
+    margin-top: 30px;
+    font-family: Montserrat-Bold;
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
     line-height: 44px;
-    text-align: center;
     color: $dark-gray;
-    margin-top: 0;
-    padding-top: .6rem;
+
+    // padding-top: .6rem;
+    &_centered {
+      text-align: center;
+    }
+
+    &_uppercase {
+      text-transform: uppercase;
+    }
   }
+
 
   &__desc {
     text-align: center;
@@ -241,6 +265,7 @@ div[class$="column"] {
   &__title {
     margin-top: 35px;
     color: $dark-gray;
+    font-family: Montserrat-Bold;
     font-weight: bold;
     font-size: 36px;
     line-height: 44px;
@@ -331,8 +356,9 @@ div[class$="column"] {
   }
 
   &__name {
-    font-size: 18px;
+    font-family: $main-bold;
     color: #676767;
+    font-size: 18px;
     font-weight: bold;
     // margin-top: 10px;
 
@@ -347,6 +373,7 @@ div[class$="column"] {
   &__model {
     font-size: 18px;
     color: $primary-color;
+    font-weight: normal;
     margin-top: 5px;
     margin-bottom: 5px;
 
@@ -357,6 +384,7 @@ div[class$="column"] {
   }
 
   &__price {
+    font-family: Montserrat-Bold;
     font-weight: bold;
     font-size: 24px;
 
@@ -500,7 +528,7 @@ div[class$="column"] {
 // Описание
 
 .full-chars {
-  display: flex;
+  // display: flex;
   justify-content: space-between;
   font-size: 14px;
   line-height: 19px;
@@ -642,7 +670,9 @@ div[class$="column"] {
   }
 
   & input,
-  &__text {
+  &__comment,
+  &__text,
+  .select-city {
     padding: 6px 10px;
     background: #F5F5F5;
     border: 0.5px solid #606060;
@@ -678,6 +708,18 @@ div[class$="column"] {
     min-height: 70px;
     max-height: 70px;
     grid-area: text;
+  }
+
+  &__comment {
+    display: none;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100px;
+    min-height: 100px;
+
+    &_show {
+      display: block
+    }
   }
 
   &__checkbox {
@@ -720,9 +762,11 @@ div[class$="column"] {
 
   &__title {
     margin: 0;
-    font-size: 20px;
+    font-family: $main-bold;
+    font-size: 30px;
     font-weight: bold;
     line-height: 37px;
+    font-style: normal;
   }
 
   &__subtitle {
@@ -759,6 +803,8 @@ div[class$="column"] {
 
   &__privacy-policy {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
     margin-top: 12px;
   }
 
@@ -773,15 +819,68 @@ div[class$="column"] {
     color: $secondary-color
   }
 
-  &__label {
-    margin-left: 10px;
-    margin-right: 25px; // 30px
-  }
+  // &__label {
+  //   margin-left: 10px;
+  //   margin-right: 25px; // 30px
+  // }
 
   &__link {
     text-decoration: underline;
   }
 }
+
+.form-group {
+  .checkbox-custom {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+
+    // Галочка
+    &:checked+label:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: calc(50% - 2px);
+      left: 7px;
+      width: 6px;
+      height: 14px;
+      border: solid $primary-color;
+      border-width: 0 2px 2px 0;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &__label {
+      position: relative;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      // Сам checkbox
+      &:before {
+        content: '';
+        position: relative;
+        display: inline-block;
+        min-width: 20px;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        border-radius: 5px;
+        border: 1px solid $primary-color;
+        cursor: pointer;
+      }
+    }
+
+  }
+
+}
+
+
+
+
+
 
 .privacy-policy,
 .developer {

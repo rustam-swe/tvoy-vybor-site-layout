@@ -22,8 +22,23 @@
   }
 }
 
+.icon {
+  &_catalog-filter {
+    margin-right: 12px
+  }
+
+  &_caret-down {
+    width: 8px;
+    height: 4px;
+    margin-left: 5px;
+  }
+}
+
 .collapse-btn {
-  color: $primary-color
+  display: flex;
+  align-items: center;
+  color: $primary-color;
+  cursor: pointer;
 }
 
 .product-count {
@@ -124,6 +139,15 @@
 
     &_active {
       background: rgba(255, 255, 255, 0.52);
+    }
+  }
+
+  &__rest-items {
+    span {
+      padding-right: 15px;
+      color: #fff;
+      font-weight: normal;
+      background: url(../imgs/caret--down-full-white.svg) no-repeat center right;
     }
   }
 

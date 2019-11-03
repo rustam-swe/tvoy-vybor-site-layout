@@ -63,6 +63,33 @@
     margin-left: 280px; // 300px 
   }
 
+  &__info {
+    position: relative;
+    display: flex;
+    width: 11px;
+    height: 11px;
+    margin-top: -15px;
+    margin-left: 5px;
+    cursor: help;
+  }
+
+  &__info-text {
+    display: none;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    width: 150px;
+    height: auto;
+    padding: 10px;
+    color: $dark-gray;
+    font-weight: normal;
+    font-size: 12px;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+
+
   &-payments {
     margin-top: 30px;
 
@@ -82,11 +109,17 @@
       margin-right: 15px;
     }
 
+
+
     &__btn {
       margin-top: 25px;
       text-transform: initial;
     }
   }
+}
+
+.icon_info:hover+.cart__info-text {
+  display: block !important
 }
 
 .pay-deliver-options {
@@ -130,6 +163,35 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
+
+  label {
+    position: relative;
+
+    .cart__info {
+      left: 100%;
+      top: -10px;
+    }
+  }
+}
+
+.select-city {
+  width: 100%;
+  height: 100%;
+  margin-right: 0;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+
+  &::after {
+    right: 12px
+  }
+
+  .select-tag {
+    padding: 6px 0;
+  }
+}
+
+.delivered-cities {
+  width: 100%;
 }
 
 .cart__total {

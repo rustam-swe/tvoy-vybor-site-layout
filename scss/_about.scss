@@ -25,7 +25,7 @@
   }
 
   &__paragraph {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     line-height: 18px;
 
     &_uppercase {
@@ -53,6 +53,17 @@
 
   &__container {
     padding-left: 50px
+  }
+
+  &__title{
+    margin-bottom: 10px
+  }
+
+  &__paragraph {
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 600;
+    line-height: 18px;
   }
 
   &__interactive {

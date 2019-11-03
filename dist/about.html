@@ -197,14 +197,14 @@
         </section>
 
         <!-- Загаловок страницы -->
-        <h1 class="page-title section-title">О компании</h1>
+        <h1 class="page-title section__title section__title_uppercase">О компании</h1>
       </div>
     </header>
 
     <section class="about">
       <div class="container">
         <header class="about__header">
-          <h1 class="about__title section__title">Твой выбор</h1>
+          <h1 class="about__title section__title section__title_uppercase">Твой выбор</h1>
         </header>
         <p class="about__paragraph">это продукция отличного качества напрямую с фабрики. Мы сами производим, продаем и
           доставляем мебель. Никаких посредников и дополнительных наценок!</p>
@@ -229,14 +229,15 @@
     <section class="featured-block">
       <div class="featured-block__container container">
         <header class="about__header">
-          <h1 class="about__title section__title">Вечный диван
+          <h1 class="about__title featured-block__title section__title section__title_uppercase">Вечный диван
             <br> нет повода заменить
             <br> на новый</h1>
         </header>
 
-        <p class="about__paragraph">Покупатели говорят, что у них нет повода поменять наши диваны на новые.</p>
-        <p class="about__paragraph">Хорошо, только один повод: если сделали ремонт и нужен диван другого цвета.</p>
-        <p class="about__paragraph">На этот случай у нас тоже есть решение:
+        <p class="featured-block__paragraph">Покупатели говорят, что у них нет повода поменять наши диваны на новые.</p>
+        <p class="featured-block__paragraph">Хорошо, только один повод: если сделали ремонт и нужен диван другого цвета.
+        </p>
+        <p class="featured-block__paragraph">На этот случай у нас тоже есть решение:
           <br />зачем покупать новый диван, если можно заменить чехлы!</p>
       </div>
 
@@ -416,15 +417,17 @@
             <input type="text" class="subscription__input" placeholder="Введите email" required>
             <button class="subscription__btn btn">Подписаться</button>
             <div class="subscription__privacy-policy">
-              <div class="subscription__checkbox">
-                <input id="privacy-policy" type="checkbox">
-                <label class="subscription__label" for="privacy-policy">Я согласен с <a href="#"
-                    class="subscription__link link">политикой
-                    конфеденциальности</a></label>
+              <div class="subscription__checkbox form-group">
+                <input id="privacy-policy" class="checkbox-custom" type="checkbox">
+                <label class="subscription__label checkbox-custom__label" for="privacy-policy"><span>
+                    Я согласен с &nbsp;<a href="#" class="subscription__link link">политикой
+                      конфеденциальности</a>
+                  </span></label>
               </div>
-              <div class="subscription__checkbox">
-                <input id="subscribe-agree" type="checkbox">
-                <label class="subscription__label" for="privacy-policy">Я хочу получать рассылки от Твой выбор</label>
+              <div class="subscription__checkbox form-group">
+                <input id="subscribe-agree" class="checkbox-custom" type="checkbox">
+                <label class="subscription__label checkbox-custom__label" for="subscribe-agree">Я хочу получать рассылки
+                  от Твой выбор</label>
               </div>
             </div>
           </form>
