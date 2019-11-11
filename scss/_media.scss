@@ -933,6 +933,11 @@
     align-items: center;
   }
 
+  // Каталог
+  .filter-title-bar{
+    justify-content: center;
+  }
+
   // Карточка товара
   .pcard {
     &__box {
@@ -1278,7 +1283,15 @@
       }
     }
   }
-
+// Каталог
+.filter-title-bar{
+  justify-content: space-between;
+  &__item{
+  font-size: 13px;
+    &:not(:first-child){
+    margin-left: 15px
+  }}
+}
 
   // Карточка товара
   .pcard {

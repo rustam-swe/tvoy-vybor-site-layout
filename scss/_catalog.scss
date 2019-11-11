@@ -34,6 +34,13 @@
   }
 }
 
+
+.filter-btn {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
 .collapse-btn {
   display: flex;
   align-items: center;
@@ -63,13 +70,19 @@
     // flex-direction: column;
     // justify-content: center;
     // height: 50px;
-    padding-left: 15px;
-    padding-right: 15px;
+    // padding-left: 15px;
+    // padding-right: 15px;
     color: $secondary-color;
     font-weight: bold;
     font-size: 14px;
     line-height: 17px;
     border-bottom: 1px solid #B0B0B0;
+  }
+
+  &__name,
+  &__details {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   &__name {
